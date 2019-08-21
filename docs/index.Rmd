@@ -46,42 +46,40 @@ knitr::include_graphics("img/html-css-javascript.jpg")
 
   - **Javascript** - é uma linguagem de programação, roda no navegador e permite que as páginas sejam dinâmicas.
 
-## Pré-requisitos
-
-- [R](https://www.r-project.org/)
-
-- [RStudio](https://www.rstudio.com/)
-
-- Pacote [RMarkdown](https://rmarkdown.rstudio.com/)
-
-- Pacote [Xaringan](https://github.com/yihui/xaringan) 
-
-- Pacote [knitr](http://yihui.name/knitr/)
-
-- Google Chrome ou Chromium
+Para os próximos passos, é importante que tenha o software [R](https://www.r-project.org/) e a versão mais recente da IDE [RStudio](https://www.rstudio.com/)  instalada, assim como o pacote [Xaringan](https://github.com/yihui/xaringan). É conselhável ter o navegador Google Chrome ou Chromium instalado.
 
 # Preparação
-## Criar um projeto
+
+1)  Criar um projeto
 ```{r }
 usethis::create_project("~/GitHub/IME-27-08-2019")
 ```
 
-## Usar o git nesse projeto - o Rstudio vai reiniciar
+2) Caso queira utilizar o git, utilize a função a seguir: (obs: o Rstudio vai reiniciar)
+
 ```{r }
 usethis::use_git()
 ```
 
-## Conectar esse repositório git com o GitHub - o RStudio vai abrir o Github em aba do navegador
+3)  Caso queira criar um repositório no GitHub com os códigos da apresentação, utilize a função a seguir: (o RStudio vai abrir o Github em aba do navegador)
 ```{r }
 usethis::use_github()
 ```
 
-## Cria a pasta `docs`, e outras pastas importantes: `img`, `css`, `libs`
-```{r }
+
+4) Caso queira deixar sua apresentação disponível no GitHub Pages, coloque todo o conteúdo da sua apresentação na pasta `docs`. Vamos considerar daqui pra frente a utilização da pasta `docs`.
+
+```{r}
 if (!dir.exists("docs")) {
   dir.create("docs")
 } 
+```
 
+
+5)  Pessoalmente, eu gosto de deixar o diretório organizado. Todas as imagens da apresentação eu insiro na pasta `img`, os  arquivos `.css` (utilizados para personalizar os temas) na pasta `css`, e as bibliotecas `javascript` na pasta `libs`. 
+
+
+```{r }
 if (!dir.exists("docs/img")) {
   dir.create("docs/img")
 } 
@@ -95,16 +93,16 @@ if (!dir.exists("docs/libs")) {
 } 
 ```
 
-## Instalar o pacote xaringan
+5) Instalar o pacote xaringan
 
 ```{r}
 install.packages("xaringan", dependencies = TRUE)
 ```
 
-## Criar arquivo xaringan - nomear como `index.Rmd` e salvar na pasta `docs`
+6) Criar arquivo xaringan - nomear como `index.Rmd` e salvar na pasta `docs`
 
 - Pode fazer clicando em ...
-```{r eval=TRUE}
+```{r echo=FALSE}
 knitr::include_graphics("img/criar-xaringan.JPG")
 ```
 
@@ -113,10 +111,10 @@ knitr::include_graphics("img/criar-xaringan.JPG")
 rmarkdown::draft("docs/index.Rmd", template = "xaringan", package = "xaringan")
 ```
 
+A partir de agora trabalharemos no arquivo `.Rmd` criado:
 ```{r}
 rstudioapi::navigateToFile("docs/index.Rmd")
 ```
-
 
 
 # Preparando o yaml
@@ -170,9 +168,17 @@ output:
 ---
 ```
 
+
+Para que o R compile o arquivo `.Rmd` para `.html`, é necessário clicar no botão `Knit` (foto abaixo), ou utilizar a função `rmarkdown::render()`:
 ```{r}
 rmarkdown::render(input = "docs/index.Rmd")
 ```
+
+```{r echo=FALSE, out.width="90%"}
+knitr::include_graphics("img/knit-button.png")
+```
+
+Agora que existe um arquivo `.html`, veja a apresentação no navegador. 
 
 O resultado desta etapa está disponível em [`docs/etapa1.html`](https://beatrizmilz.github.io/IME-27-08-2019/etapa1.html).
 
@@ -233,11 +239,8 @@ output:
 
 ```
 
-```{r}
-rmarkdown::render(input = "docs/index.Rmd")
-```
 
-O resultado desta etapa está disponível em [`docs/etapa2.html`](https://beatrizmilz.github.io/IME-27-08-2019/etapa2.html).
+Faça novamente o processo de Knit e veja o que aconteceu com a apresentação. O resultado desta etapa está disponível em [`docs/etapa2.html`](https://beatrizmilz.github.io/IME-27-08-2019/etapa2.html).
 
 
 
@@ -327,8 +330,31 @@ $$y = \mu + \sum_{i=1}^p \beta_i x_i + \epsilon$$
 
 ## Chuncks de Código R
 
-Os chuncks são campos onde podemos inserir código de R (ou Python, SQL,  Bash...) em um arquivo RMarkdown. Existe um atalho do teclado para criar chunks no RStudio:  `Ctrl + ALt + I`.
+Os chuncks são campos onde podemos inserir código de R (ou Python, SQL,  Bash...) em um arquivo RMarkdown. Existe um atalho do teclado para criar chunks no RStudio:  `Ctrl + ALt + I`. Também é possível criar um chunck clicando no seguinte botão do RStudio:
 
+
+```{r echo=FALSE, out.width="90%"}
+knitr::include_graphics("img/create-chunck.png")
+```
+
+### Opções de Chunck
+
+
+### Opções globais de Chunck
+
+As opções globais de chunck são opções de chucnk que são válidas para o documento inteiro. Algumas opções são úteis, como `fig.align = "center"`.
+Para configurar as opções globais de chunck, modifique o código abaixo e insira após o código `yaml` (retire os `#` no início de cada linha):
+
+```{r}
+
+# ```{r setup, include=FALSE}
+# knitr::opts_chunk$set(echo = TRUE)
+# ```
+
+```
+
+
+---
 # Conteúdos extras
 ## Addins do RStudio
  
@@ -336,6 +362,8 @@ Existe um `addin` que facilita a
 ```{r}
 remotes::install_github("ThinkR-open/remedy")
 ```
+
+---
 
 # Referências
 
@@ -365,14 +393,3 @@ remotes::install_github("ThinkR-open/remedy")
 - **Outros**:
 
   - [R for Data Science](http://r4ds.had.co.nz/)
-
-
-
-
-
-
-
-
-
-
-
