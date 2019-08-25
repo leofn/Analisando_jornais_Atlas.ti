@@ -4,6 +4,55 @@
     <title>Introdução ao pacote xaringan</title>
     <meta charset="utf-8" />
     <meta name="author" content="Beatriz Milz" />
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/jquery/jquery.min.js"></script>
+    <link href="libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="libs/datatables-binding/datatables.js"></script>
+    <link href="libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="libs/dt-core/js/jquery.dataTables.min.js"></script>
+    <link href="libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+    <script src="libs/crosstalk/js/crosstalk.min.js"></script>
+    <script src="libs/proj4js/proj4.js"></script>
+    <link href="libs/highcharts/css/motion.css" rel="stylesheet" />
+    <link href="libs/highcharts/css/htmlwdgtgrid.css" rel="stylesheet" />
+    <script src="libs/highcharts/highcharts.js"></script>
+    <script src="libs/highcharts/highcharts-3d.js"></script>
+    <script src="libs/highcharts/highcharts-more.js"></script>
+    <script src="libs/highcharts/modules/stock.js"></script>
+    <script src="libs/highcharts/modules/map.js"></script>
+    <script src="libs/highcharts/modules/annotations.js"></script>
+    <script src="libs/highcharts/modules/boost.js"></script>
+    <script src="libs/highcharts/modules/data.js"></script>
+    <script src="libs/highcharts/modules/drag-panes.js"></script>
+    <script src="libs/highcharts/modules/drilldown.js"></script>
+    <script src="libs/highcharts/modules/item-series.js"></script>
+    <script src="libs/highcharts/modules/offline-exporting.js"></script>
+    <script src="libs/highcharts/modules/overlapping-datalabels.js"></script>
+    <script src="libs/highcharts/modules/exporting.js"></script>
+    <script src="libs/highcharts/modules/export-data.js"></script>
+    <script src="libs/highcharts/modules/funnel.js"></script>
+    <script src="libs/highcharts/modules/heatmap.js"></script>
+    <script src="libs/highcharts/modules/treemap.js"></script>
+    <script src="libs/highcharts/modules/sankey.js"></script>
+    <script src="libs/highcharts/modules/solid-gauge.js"></script>
+    <script src="libs/highcharts/modules/streamgraph.js"></script>
+    <script src="libs/highcharts/modules/sunburst.js"></script>
+    <script src="libs/highcharts/modules/vector.js"></script>
+    <script src="libs/highcharts/modules/wordcloud.js"></script>
+    <script src="libs/highcharts/modules/xrange.js"></script>
+    <script src="libs/highcharts/modules/tilemap.js"></script>
+    <script src="libs/highcharts/modules/venn.js"></script>
+    <script src="libs/highcharts/modules/gantt.js"></script>
+    <script src="libs/highcharts/modules/timeline.js"></script>
+    <script src="libs/highcharts/modules/parallel-coordinates.js"></script>
+    <script src="libs/highcharts/plugins/grouped-categories.js"></script>
+    <script src="libs/highcharts/plugins/motion.js"></script>
+    <script src="libs/highcharts/plugins/multicolor_series.js"></script>
+    <script src="libs/highcharts/custom/reset.js"></script>
+    <script src="libs/highcharts/custom/symbols-extra.js"></script>
+    <script src="libs/highcharts/custom/text-symbols.js"></script>
+    <script src="libs/highchart-binding/highchart.js"></script>
     <link rel="stylesheet" href="css\default.css" type="text/css" />
     <link rel="stylesheet" href="css\mmp.css" type="text/css" />
     <link rel="stylesheet" href="css\mmp-fonts.css" type="text/css" />
@@ -27,8 +76,10 @@ layout: true
 &lt;a href="https://beatrizmilz.com"&gt;Beatriz Milz&lt;/a&gt; - Email: &lt;a href="mailto:beatriz.milz@usp.br"&gt;beatriz.milz@usp.br&lt;/a&gt;
 &lt;/span&gt;&lt;/div&gt;
 
+
 ---
 class: middle
+
 
 
 
@@ -103,15 +154,15 @@ class: middle
 # Pacote rmarkdown
 
 &lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="img/rlogos/hex-rmarkdown.png" alt="&amp;lt;center&amp;gt;&amp;lt;b&amp;gt;Logo: &amp;lt;a href='https://rmarkdown.rstudio.com'&amp;gt;Pacote rmarkdown&amp;lt;/a&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/center&amp;gt;" width="25%" /&gt;
-&lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt;Logo: &lt;a href='https://rmarkdown.rstudio.com'&gt;Pacote rmarkdown&lt;/a&gt;&lt;/b&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;img src="img/rlogos/hex-rmarkdown.png" alt="&amp;lt;center&amp;gt;&amp;lt;b&amp;gt;Logo: &amp;lt;a href='https://rmarkdown.rstudio.com'&amp;gt;Pacote Rmarkdown&amp;lt;/a&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/center&amp;gt;" width="25%" /&gt;
+&lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt;Logo: &lt;a href='https://rmarkdown.rstudio.com'&gt;Pacote Rmarkdown&lt;/a&gt;&lt;/b&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;/div&gt;
 
 - Mantido pela [RStudio](https://rstudio.com/)
 
 - extensão `.Rmd`
 
-- Possibilita a utilização de códigos R, Markdown, HTML e outros.
+- Possibilita a utilização de códigos `R`, `Markdown`, `HTML` e outros.
 
 - Útil para relatórios dinâmicos!
 
@@ -124,8 +175,8 @@ class: middle
 # Pacote rmarkdown
 
 &lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="img/RMarkdownOutputFormats.png" alt="&amp;lt;center&amp;gt;&amp;lt;b&amp;gt;Fonte: &amp;lt;a href='https://rmarkdown.rstudio.com'&amp;gt;Pacote rmarkdown&amp;lt;/a&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/center&amp;gt;" width="60%" /&gt;
-&lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt;Fonte: &lt;a href='https://rmarkdown.rstudio.com'&gt;Pacote rmarkdown&lt;/a&gt;&lt;/b&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;img src="img/RMarkdownOutputFormats.png" alt="&amp;lt;center&amp;gt;&amp;lt;b&amp;gt;Fonte: &amp;lt;a href='https://rmarkdown.rstudio.com'&amp;gt;Pacote Rmarkdown&amp;lt;/a&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/center&amp;gt;" width="60%" /&gt;
+&lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt;Fonte: &lt;a href='https://rmarkdown.rstudio.com'&gt;Pacote Rmarkdown&lt;/a&gt;&lt;/b&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;/div&gt;
 
 
@@ -139,11 +190,328 @@ class: middle
 &lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt;Logo: &lt;a href='https://github.com/yihui/xaringan'&gt;Pacote xaringan&lt;/a&gt;&lt;/b&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;/div&gt;
 
-- Possibilita criar apresentações **ninja** com R Markdown
+- Possibilita criar apresentações **ninja** com `RMarkdown`
 
-- Utiliza a biblioteca remark.js
+- Utiliza a biblioteca `remark.js`
 
 - Resultado em HTML (mas também PDF - estático)
+
+
+---
+class: middle
+
+# Estrutura da apresentação
+
+- No `xaringan`, utilizamos o arquivo `.Rmd` para escrever o código da apresentação, e é compilado para um arquivo `.html`. 
+- Esse arquivo `.html` é interpretado pelo navegador (ex. Chrome), utilizando também os arquivos `.css` e `.js`
+
+&lt;img src="img/html-css-javascript.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+
+---
+class: middle
+
+# Estrutura da apresentação
+
+&lt;img src="img/html-css-javascript.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+  - **HTML** (HyperText Markup Language - Linguagem de Marcação de Hipertexto) - é uma linguagem de marcação, é usado para estruturar a página.
+
+  - **CSS** (Cascading Style Sheets - Folha de Estilo em Cascata) - é usado para estilizar os elementos escritos no HTML.
+
+  - **Javascript** - é uma linguagem de programação, permite que as páginas sejam dinâmicas.
+
+---
+class: middle
+
+# Quais elementos podemos utilizar?
+
+- Texto
+
+- `Markdown`
+
+- Links
+
+- Código R
+
+- Tabelas
+
+- Gráficos
+
+
+
+---
+class: middle, center
+
+# Exemplos
+
+
+
+![CAT+](https://media0.giphy.com/media/CjmvTCZf2U3p09Cn0h/giphy-downsized.gif)  
+
+
+---
+class: middle
+
+## Texto
+
+O pacote foi criado por Yihui Xie, que é desenvolvedor de software na RStudio. Yihui Xie também desenvolveu os seguintes pacotes: knitr, animation, bookdown, blogdown, pagedown e tinytex.
+
+## Markdown
+
+O pacote ~~xaringan~~ foi criado por [**Yihui Xie**](https://yihui.name/), que é desenvolvedor de software na *RStudio*.
+
+**Código Markdown:**
+
+
+```r
+# O pacote ~~xaringan~~ foi criado por [**Yihui Xie**](https://yihui.name/),
+# que é desenvolvedor de software na *RStudio*.
+```
+
+
+---
+class: middle
+
+## Links em Markdown
+
+
+
+[**Yihui Xie**](https://yihui.name/) também desenvolveu os seguintes pacotes: [knitr](https://yihui.name/knitr/), [animation](https://yihui.name/animation/), [bookdown](https://bookdown.org/), [blogdown](https://github.com/rstudio/blogdown), [pagedown](https://github.com/rstudio/blogdown) e [tinytex](https://yihui.name/tinytex/).
+
+**Código Markdown:**
+
+
+```r
+# [**Yihui Xie**](https://yihui.name/) também desenvolveu os seguintes pacotes: 
+# [knitr](https://yihui.name/knitr/),
+# [animation](https://yihui.name/animation/),
+# [bookdown](https://bookdown.org/), 
+# [blogdown](https://github.com/rstudio/blogdown),
+# [pagedown](https://github.com/rstudio/blogdown) e
+# [tinytex](https://yihui.name/tinytex/).
+```
+
+
+
+
+
+---
+class: middle
+
+## Códigos em R
+
+### Código + Resultado
+
+
+```r
+nrow(mtcars)
+```
+
+```
+## [1] 32
+```
+
+### Apenas código
+
+```r
+nrow(mtcars)
+```
+
+### Apenas resultado
+
+```
+## [1] 32
+```
+
+
+### Código inline
+
+A base mtcars possui 32 carros.
+
+**Código Markdown:**
+
+
+```r
+#   A base mtcars possui `r nrow(mtcars)` carros.
+```
+
+
+---
+class: middle
+
+## Tabelas
+
+### Tabelas em Markdown
+
+| Sepal.Length| Sepal.Width| Petal.Length| Petal.Width|Species |
+|------------:|-----------:|------------:|-----------:|:-------|
+|          5.1|         3.5|          1.4|         0.2|setosa  |
+|          4.9|         3.0|          1.4|         0.2|setosa  |
+|          4.7|         3.2|          1.3|         0.2|setosa  |
+|          4.6|         3.1|          1.5|         0.2|setosa  |
+|          5.0|         3.6|          1.4|         0.2|setosa  |
+|          5.4|         3.9|          1.7|         0.4|setosa  |
+
+- **Código Markdown**:
+
+
+```r
+# | Sepal.Length| Sepal.Width| Petal.Length| Petal.Width|Species |
+# |------------:|-----------:|------------:|-----------:|:-------|
+# |          5.1|         3.5|          1.4|         0.2|setosa  |
+# |          4.9|         3.0|          1.4|         0.2|setosa  |
+# |          4.7|         3.2|          1.3|         0.2|setosa  |
+# |          4.6|         3.1|          1.5|         0.2|setosa  |
+# |          5.0|         3.6|          1.4|         0.2|setosa  |
+# |          5.4|         3.9|          1.7|         0.4|setosa  |
+```
+
+
+
+---
+class: middle
+
+## Tabelas
+
+### Tabelas em R
+
+
+```r
+knitr::kable(x = head(iris), format = "markdown")
+```
+
+
+
+| Sepal.Length| Sepal.Width| Petal.Length| Petal.Width|Species |
+|------------:|-----------:|------------:|-----------:|:-------|
+|          5.1|         3.5|          1.4|         0.2|setosa  |
+|          4.9|         3.0|          1.4|         0.2|setosa  |
+|          4.7|         3.2|          1.3|         0.2|setosa  |
+|          4.6|         3.1|          1.5|         0.2|setosa  |
+|          5.0|         3.6|          1.4|         0.2|setosa  |
+|          5.4|         3.9|          1.7|         0.4|setosa  |
+
+```r
+knitr::kable(x = head(iris), format = "pandoc")
+```
+
+
+
+ Sepal.Length   Sepal.Width   Petal.Length   Petal.Width  Species 
+-------------  ------------  -------------  ------------  --------
+          5.1           3.5            1.4           0.2  setosa  
+          4.9           3.0            1.4           0.2  setosa  
+          4.7           3.2            1.3           0.2  setosa  
+          4.6           3.1            1.5           0.2  setosa  
+          5.0           3.6            1.4           0.2  setosa  
+          5.4           3.9            1.7           0.4  setosa  
+
+---
+class: middle
+
+## Tabelas
+
+### Tabelas interativas em R
+
+
+```r
+DT::datatable(data = head(iris))  
+```
+
+<div id="htmlwidget-e5eccf0a63381dae6bc2" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e5eccf0a63381dae6bc2">{"x":{"filter":"none","data":[["1","2","3","4","5","6"],[5.1,4.9,4.7,4.6,5,5.4],[3.5,3,3.2,3.1,3.6,3.9],[1.4,1.4,1.3,1.5,1.4,1.7],[0.2,0.2,0.2,0.2,0.2,0.4],["setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+
+---
+class: middle
+
+## Gráficos
+
+### Gráficos em R
+
+
+
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-21-1.png" alt="&amp;lt;center&amp;gt;&amp;lt;b&amp;gt;Fonte: &amp;lt;a href='https://www.datanovia.com/en/blog/gganimate-how-to-create-plots-with-beautiful-animation-in-r/'&amp;gt;Adaptado de Data Novia&amp;lt;/a&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/center&amp;gt;" width="60%" /&gt;
+&lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt;Fonte: &lt;a href='https://www.datanovia.com/en/blog/gganimate-how-to-create-plots-with-beautiful-animation-in-r/'&gt;Adaptado de Data Novia&lt;/a&gt;&lt;/b&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+
+---
+class: middle
+
+## Gráficos
+
+### Gráficos dinâmicos em R
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-22-1.gif" alt="&amp;lt;center&amp;gt;&amp;lt;b&amp;gt;Fonte: &amp;lt;a href='https://www.datanovia.com/en/blog/gganimate-how-to-create-plots-with-beautiful-animation-in-r/'&amp;gt;Adaptado de Data Novia&amp;lt;/a&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/center&amp;gt;" width="60%" /&gt;
+&lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt;Fonte: &lt;a href='https://www.datanovia.com/en/blog/gganimate-how-to-create-plots-with-beautiful-animation-in-r/'&gt;Adaptado de Data Novia&lt;/a&gt;&lt;/b&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+---
+class: middle
+
+## Gráficos
+
+### Gráficos interativos em R
+
+&lt;div class="figure" style="text-align: center"&gt;
+<div id="htmlwidget-e5eccf0a63381dae6bc2" style="width:100%;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e5eccf0a63381dae6bc2">{"x":{"hc_opts":{"title":{"text":"Expectativa de vida por País - Mercosul","margin":20,"align":"left","style":{"color":"steelblue"}},"yAxis":{"title":{"text":null}},"credits":{"enabled":true,"text":"Gapminder Data","href":"http://gapminder.com"},"exporting":{"enabled":true},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0},"treemap":{"layoutAlgorithm":"squarified"}},"xAxis":{"categories":[1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007]},"series":[{"data":[50.917,53.285,55.665,57.632,59.504,61.489,63.336,65.205,67.057,69.388,71.006,72.39],"name":"Brasil"},{"data":[62.485,64.399,65.142,65.634,67.065,68.481,69.942,70.774,71.868,73.275,74.34,75.32],"name":"Argentina"},{"data":[62.649,63.196,64.361,64.951,65.815,66.353,66.874,67.378,68.225,69.4,70.755,71.752],"name":"Paraguai"},{"data":[66.071,67.044,68.253,68.468,68.673,69.481,70.805,71.918,72.752,74.223,75.307,76.384],"name":"Uruguai"}],"subtitle":{"text":"1952 à 2007","align":"left","style":{"color":"#2b908f","fontWeight":"bold"}},"legend":{"align":"left","verticalAlign":"top","layout":"vertical","x":0,"y":100},"tooltip":{"crosshairs":true,"backgroundColor":"#FCFFC5","shared":true,"borderWidth":4}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+&lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt; Fonte: &lt;a href='https://rkabacoff.github.io/datavis/Interactive.html'&gt;Adaptado de Datavis with R &lt;/a&gt;&lt;/b&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+---
+class: middle, center
+
+
+# Muito legal!
+
+![cat](https://media1.giphy.com/media/Nm8ZPAGOwZUQM/giphy.gif)  
+ 
+---
+class: middle, center
+
+# Mas existem mais elementos!
+
+![cat](https://media0.giphy.com/media/5i7umUqAOYYEw/giphy-downsized.gif) 
+
+---
+class: middle
+
+# Quais elementos podemos utilizar?
+
+- Equações
+
+- Imagens
+
+- GIF
+
+- Linha do tempo
+
+---
+class: middle
+
+## GIF
+
+
+```r
+knitr::include_graphics("https://media2.giphy.com/media/S857VNxM6HwlZuYXrU/giphy.gif")
+```
+
+&lt;img src="https://media2.giphy.com/media/S857VNxM6HwlZuYXrU/giphy.gif" width="70%" style="display: block; margin: auto;" /&gt;
+
+
+Dica: Addin do RStudio - [giphyr](https://github.com/haozhu233/giphyr)
+
+---
+Class: middle, center
+
+# Vantagens
+
+- Como é uma apresentação elaborada com códigos, é possível utilizar o versionamento de código utilizando `Git` e `GitHub`, e possibilita o desenvolvimento do material em equipe.
+
 
 ---
 class: middle
