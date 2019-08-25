@@ -11,6 +11,7 @@ output:
     css: ["css/default.css", "css/mmp.css" , "css/mmp-fonts.css"]
     lib_dir: libs
     nature:
+      beforeInit: "https://platform.twitter.com/widgets.js"
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
@@ -375,6 +376,8 @@ p + facet_wrap(~continent) +
   labs(title = "Ano: {frame_time}")
 ```
 
+
+
 ---
 class: middle
 
@@ -382,11 +385,10 @@ class: middle
 
 ### Gráficos interativos em R
 
-```{r highcharter, echo=FALSE, fig.cap="<center><b> Fonte: <a href='https://rkabacoff.github.io/datavis/Interactive.html'>Adaptado de Datavis with R </a></b></center>", cache=TRUE, out.width="45%"}
+```{r highcharter, cache=TRUE, echo=FALSE, fig.cap="<center><b> Fonte: <a href='https://rkabacoff.github.io/datavis/Interactive.html'>Adaptado de Datavis with R </a></b></center>", out.width="45%"}
 
 # create interactive line chart
 library(highcharter)
-
 # prepare data
 data(gapminder, package = "gapminder")
 library(dplyr)
@@ -432,7 +434,7 @@ h <- highchart() %>%
              borderWidth = 4) %>% 
   hc_exporting(enabled = TRUE)
 
-  h
+  widgetframe::frameWidget(h)
 ```
 
 ---
@@ -461,12 +463,64 @@ class: middle
 
 - GIF
 
+- tweets
+
 - Linha do tempo
+
+- Emoticon
+
 
 ---
 class: middle
 
-## GIF
+## Equações
+
+### Equação centralizada
+
+$$INTRAG_{i} = 100 * n_{i} / n_{t}$$
+
+**Código Markdown:**
+
+```{r echo=TRUE}
+# $$INTRAG_{i} = 100 * n_{i} / n_{t}$$
+```
+
+---
+class: middle
+
+## Equações
+
+
+### Equação junto ao texto
+
+Ou também na linha $INTRAG_{i} = 100 * n_{i} / n_{t}$, junto ao texto!
+
+**Código Markdown:**
+
+```{r echo=TRUE}
+# Ou também na linha $INTRAG_{i} = 100 * n_{i} / n_{t}$, junto ao texto!
+```
+
+
+---
+class: middle
+
+## Imagens
+
+```{r echo=TRUE, out.width="90%"}
+knitr::include_graphics("https://github.com/rladies/starter-kit/raw/master/logo/R-LadiesGlobal_RBG_online_LogoWithText_Horizontal.png")
+```
+
+
+
+
+
+
+
+---
+class: middle
+
+## GIFs
 
 ```{r echo=TRUE, out.width="70%"}
 knitr::include_graphics("https://media2.giphy.com/media/S857VNxM6HwlZuYXrU/giphy.gif")
@@ -474,6 +528,15 @@ knitr::include_graphics("https://media2.giphy.com/media/S857VNxM6HwlZuYXrU/giphy
 
 
 Dica: Addin do RStudio - [giphyr](https://github.com/haozhu233/giphyr)
+
+---
+class: middle
+
+## Tweets 
+<center><blockquote class="twitter-tweet" data-lang="pt"><p lang="pt" dir="ltr">Sábado passado aconteceu o <a href="https://twitter.com/hashtag/meetup?src=hash&amp;ref_src=twsrc%5Etfw">#meetup</a> de aniversário de 1 ano da <a href="https://twitter.com/hashtag/RLadies?src=hash&amp;ref_src=twsrc%5Etfw">#RLadies</a> São Paulo! O evento aconteceu lá na <a href="https://twitter.com/thoughtworksbr?ref_src=twsrc%5Etfw">@thoughtworksbr</a> , fomos super bem recebidas pela Chris, agradecemos muito pelo espaço e coffe break! Segue algumas fotos: <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/rstatsbr?src=hash&amp;ref_src=twsrc%5Etfw">#rstatsbr</a> <a href="https://t.co/FfW8Et1FVx">pic.twitter.com/FfW8Et1FVx</a></p>&mdash; R-Ladies São Paulo (@RLadiesSaoPaulo) <a href="https://twitter.com/RLadiesSaoPaulo/status/1165359598376771585?ref_src=twsrc%5Etfw">24 de agosto de 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
+
+- No twitter, copie o código disponível em "Incorporar esse tweet".
 
 ---
 Class: middle, center
