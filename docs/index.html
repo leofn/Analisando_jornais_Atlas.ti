@@ -26,7 +26,6 @@ class: center, middle, inverse, title-slide
 # Introdução ao pacote <code>xaringan</code>
 ## Criando apresentações com <code>R</code>
 ### Beatriz Milz
-### Instituição
 ### 27-08-2019
 
 ---
@@ -56,7 +55,7 @@ class: middle
 
 - Equipe da Secretaria Executiva  Editorial - [Revista Ambiente &amp; Sociedade](http://scielo.br/asoc)
 
-- Co-organizadora - [R-Ladies São Paulo](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo)
+- Co-organizadora - [R-Ladies São Paulo](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo) 💜
 
 - [Currículo disponível neste link](https://beatrizmilz.github.io/resume/index.pdf)
 
@@ -89,6 +88,17 @@ class:
   - Facebook: [@RLadiesSaoPaulo](http://facebook.com/RLadiesSaoPaulo)
   - MeetUp: [https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo)
   - Github: [https://github.com/rladies/meetup-presentations_sao-paulo](https://github.com/rladies/meetup-presentations_sao-paulo)
+
+---
+class: middle
+
+# Pré-requisitos
+
+## R
+- Download em: https://cran.r-project.org/
+
+## RStudio
+- Download em: https://www.rstudio.com/products/rstudio/download/
 
 ---
 class: middle
@@ -126,11 +136,6 @@ class: middle
 
 - Possibilita a utilização de códigos `R`, `Markdown`, `HTML` e outros.
 
-- Útil para relatórios dinâmicos!
-
-- Confira a [Galeria](https://rmarkdown.rstudio.com/gallery.html)!
-
-
 ---
 class: middle
 
@@ -162,6 +167,39 @@ class: middle
 ---
 class: middle
 
+# Como usar o xaringan?
+- Instalar o pacote:
+
+
+```r
+install.packages("xaringan")
+```
+
+- Criar um novo RProj (post da [Curso-R](https://www.curso-r.com): sobre [RProj e diretórios](https://www.curso-r.com/blog/2019-07-16-zen-do-r-3/))
+  - File &gt; New Project
+
+- Criar um arquivo:
+  - File &gt; New File &gt; R Markdown...
+  - New RMarkdown &gt; From Template &gt; Ninja presentation
+  
+- Apagar todo o conteúdo após o código `yaml`
+---
+class: middle
+
+# Estrutura do .Rmd
+
+&lt;img src="img/rmd-estrutura.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle
+
+# Dicas .Rmd
+
+&lt;img src="img/rmd-dicas.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle
+
 # Estrutura da apresentação
 
 - No `xaringan`, utilizamos o arquivo `.Rmd` para escrever o código da apresentação, e é compilado para um arquivo `.html`. 
@@ -186,7 +224,7 @@ class: middle
 ---
 class: middle
 
-# Quais elementos podemos utilizar?
+# O que podemos adicionar na apresentação? 
 
 - Texto
 
@@ -259,7 +297,7 @@ class: middle
 
 
 ---
-class: middle
+class: 
 
 ## Códigos em R
 
@@ -273,19 +311,19 @@ nrow(mtcars)
 ```
 ## [1] 32
 ```
-
+--
 ### Apenas código
 
 ```r
 nrow(mtcars)
 ```
-
+--
 ### Apenas resultado
 
 ```
 ## [1] 32
 ```
-
+--
 
 ### Código inline
 
@@ -381,21 +419,20 @@ class: middle
 DT::datatable(data = head(iris))  
 ```
 
-<div id="htmlwidget-e5eccf0a63381dae6bc2" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e5eccf0a63381dae6bc2">{"x":{"filter":"none","data":[["1","2","3","4","5","6"],[5.1,4.9,4.7,4.6,5,5.4],[3.5,3,3.2,3.1,3.6,3.9],[1.4,1.4,1.3,1.5,1.4,1.7],[0.2,0.2,0.2,0.2,0.2,0.4],["setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
-
+&lt;div id="htmlwidget-e2eea2022e329e85f184" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e2eea2022e329e85f184">{"x":{"filter":"none","data":[["1","2","3","4","5","6"],[5.1,4.9,4.7,4.6,5,5.4],[3.5,3,3.2,3.1,3.6,3.9],[1.4,1.4,1.3,1.5,1.4,1.7],[0.2,0.2,0.2,0.2,0.2,0.4],["setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><
 ---
 class: middle
 
 ## Gráficos
 
-### Gráficos em R
+### Gráficos em `R` - `ggplot2`
 
 
 
 
 &lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="index_files/figure-html/unnamed-chunk-21-1.png" alt="&amp;lt;center&amp;gt;&amp;lt;b&amp;gt;Fonte: &amp;lt;a href='https://www.datanovia.com/en/blog/gganimate-how-to-create-plots-with-beautiful-animation-in-r/'&amp;gt;Adaptado de Data Novia&amp;lt;/a&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/center&amp;gt;" width="60%" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-24-1.png" alt="&amp;lt;center&amp;gt;&amp;lt;b&amp;gt;Fonte: &amp;lt;a href='https://www.datanovia.com/en/blog/gganimate-how-to-create-plots-with-beautiful-animation-in-r/'&amp;gt;Adaptado de Data Novia&amp;lt;/a&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/center&amp;gt;" width="60%" /&gt;
 &lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt;Fonte: &lt;a href='https://www.datanovia.com/en/blog/gganimate-how-to-create-plots-with-beautiful-animation-in-r/'&gt;Adaptado de Data Novia&lt;/a&gt;&lt;/b&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;/div&gt;
 
@@ -405,9 +442,9 @@ class: middle
 
 ## Gráficos
 
-### Gráficos dinâmicos em R
+### Gráficos dinâmicos em `R` - `ggplot2` + `gganimate`
 &lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="index_files/figure-html/unnamed-chunk-22-1.gif" alt="&amp;lt;center&amp;gt;&amp;lt;b&amp;gt;Fonte: &amp;lt;a href='https://www.datanovia.com/en/blog/gganimate-how-to-create-plots-with-beautiful-animation-in-r/'&amp;gt;Adaptado de Data Novia&amp;lt;/a&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/center&amp;gt;" width="60%" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-25-1.gif" alt="&amp;lt;center&amp;gt;&amp;lt;b&amp;gt;Fonte: &amp;lt;a href='https://www.datanovia.com/en/blog/gganimate-how-to-create-plots-with-beautiful-animation-in-r/'&amp;gt;Adaptado de Data Novia&amp;lt;/a&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/center&amp;gt;" width="60%" /&gt;
 &lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt;Fonte: &lt;a href='https://www.datanovia.com/en/blog/gganimate-how-to-create-plots-with-beautiful-animation-in-r/'&gt;Adaptado de Data Novia&lt;/a&gt;&lt;/b&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;/div&gt;
 
@@ -418,12 +455,11 @@ class: middle
 
 ## Gráficos
 
-### Gráficos interativos em R
+### Gráficos interativos em `R` - `highcharter`
 
 &lt;div class="figure" style="text-align: center"&gt;
-<div id="htmlwidget-e2eea2022e329e85f184" style="width:100%;height:504px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e2eea2022e329e85f184">{"x":{"url":"index_files/figure-html//widgets/widget_highcharter.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
-&lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt; Fonte: &lt;a href='https://rkabacoff.github.io/datavis/Interactive.html'&gt;Adaptado de Datavis with R &lt;/a&gt;&lt;/b&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;div id="htmlwidget-e2eea2022e329e85f184" style="width:100%;height:504px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e2eea2022e329e85f184">{"x":{"url":"index_files/figure-html//widgets/widget_highcharterplot.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script><&lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt; Fonte: &lt;a href='https://rkabacoff.github.io/datavis/Interactive.html'&gt;Adaptado de Datavis with R &lt;/a&gt;&lt;/b&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;/div&gt;
 
 ---
@@ -437,14 +473,14 @@ class: middle, center
 ---
 class: middle, center
 
-# Mas existem mais elementos!
+# Mas existem mais!
 
 ![cat](https://media0.giphy.com/media/5i7umUqAOYYEw/giphy-downsized.gif) 
 
 ---
 class: middle
 
-# Quais elementos podemos utilizar?
+# O que podemos adicionar na apresentação? 
 
 - Equações
 
@@ -452,11 +488,11 @@ class: middle
 
 - GIF
 
-- tweets
+- Tweets
 
 - Linha do tempo
 
-- Emoticon
+- Emojis 😄
 
 
 ---
@@ -521,10 +557,17 @@ class: middle
 knitr::include_graphics("https://media2.giphy.com/media/S857VNxM6HwlZuYXrU/giphy.gif")
 ```
 
-&lt;img src="https://media2.giphy.com/media/S857VNxM6HwlZuYXrU/giphy.gif" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media2.giphy.com/media/S857VNxM6HwlZuYXrU/giphy.gif" width="60%" style="display: block; margin: auto;" /&gt;
 
 
-Dica: Addin do RStudio - [giphyr](https://github.com/haozhu233/giphyr)
+- O Addin [giphyr](https://github.com/haozhu233/giphyr) ajuda a procurar Gifs diretamente do RStudio!
+
+
+```r
+devtools::install_github("haozhu233/giphyr")
+```
+
+
 
 ---
 class: middle
@@ -533,7 +576,49 @@ class: middle
 &lt;center&gt;&lt;blockquote class="twitter-tweet" data-lang="pt"&gt;&lt;p lang="pt" dir="ltr"&gt;Sábado passado aconteceu o &lt;a href="https://twitter.com/hashtag/meetup?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#meetup&lt;/a&gt; de aniversário de 1 ano da &lt;a href="https://twitter.com/hashtag/RLadies?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#RLadies&lt;/a&gt; São Paulo! O evento aconteceu lá na &lt;a href="https://twitter.com/thoughtworksbr?ref_src=twsrc%5Etfw"&gt;@thoughtworksbr&lt;/a&gt; , fomos super bem recebidas pela Chris, agradecemos muito pelo espaço e coffe break! Segue algumas fotos: &lt;a href="https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#rstats&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/rstatsbr?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#rstatsbr&lt;/a&gt; &lt;a href="https://t.co/FfW8Et1FVx"&gt;pic.twitter.com/FfW8Et1FVx&lt;/a&gt;&lt;/p&gt;&amp;mdash; R-Ladies São Paulo (@RLadiesSaoPaulo) &lt;a href="https://twitter.com/RLadiesSaoPaulo/status/1165359598376771585?ref_src=twsrc%5Etfw"&gt;24 de agosto de 2019&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/center&gt;
 
+
+---
+class: middle
+
+## Tweets 
+
+- Adicione o seguinte código no `yaml`:
+
+```r
+    # nature:
+    #   beforeInit: "https://platform.twitter.com/widgets.js"
+```
+
+
 - No twitter, copie o código disponível em "Incorporar esse tweet".
+
+---
+Class: middle, center
+
+## Emojis
+
+- Para utilizar emojis, instale o pacote:
+
+```r
+devtools::install_github("hadley/emo")
+```
+
+
+- Exemplo:
+
+```r
+# `r emo::ji("purple_heart")`
+```
+
+💜
+
+- O addin `ermoji` ajuda a procurar emojis!
+
+
+```r
+devtools::install_github("gadenbuie/ermoji")
+```
+
 
 ---
 Class: middle, center

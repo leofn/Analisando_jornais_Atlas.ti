@@ -2,7 +2,7 @@
 title: "Introdução ao pacote `xaringan`"
 subtitle: "Criando apresentações com `R`"
 author: "Beatriz Milz"
-institute: "Instituição"
+#institute: "Instituição"
 date: "27-08-2019"
 encoding: "UTF-8"
 output:
@@ -50,7 +50,7 @@ knitr::include_graphics("img/logos_bia.png")
 
 - Equipe da Secretaria Executiva  Editorial - [Revista Ambiente & Sociedade](http://scielo.br/asoc)
 
-- Co-organizadora - [R-Ladies São Paulo](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo)
+- Co-organizadora - [R-Ladies São Paulo](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo) `r emo::ji("purple_heart")`
 
 - [Currículo disponível neste link](https://beatrizmilz.github.io/resume/index.pdf)
 
@@ -86,6 +86,17 @@ knitr::include_graphics("img/hexlogorladies.jpeg")
 ---
 class: middle
 
+# Pré-requisitos
+
+## R
+- Download em: https://cran.r-project.org/
+
+## RStudio
+- Download em: https://www.rstudio.com/products/rstudio/download/
+
+---
+class: middle
+
 # O ciclo da ciência de dados
 ```{r, out.width="100%", fig.cap="<center><b>Ilustração por Allison Horst - Twitter: <a href='https://twitter.com/allison_horst/'> @allison_horst</a> - Adaptado de WICKHAM & GROLEMUND, 2017</b></center>"}
 knitr::include_graphics("img/allisonhorst/data-analysis.jpg")
@@ -116,11 +127,6 @@ knitr::include_graphics("img/rlogos/hex-rmarkdown.png")
 
 - Possibilita a utilização de códigos `R`, `Markdown`, `HTML` e outros.
 
-- Útil para relatórios dinâmicos!
-
-- Confira a [Galeria](https://rmarkdown.rstudio.com/gallery.html)!
-
-
 ---
 class: middle
 
@@ -146,6 +152,42 @@ knitr::include_graphics("img/rlogos/hex-xaringan.png")
 
 - Resultado em HTML (mas também PDF - estático)
 
+
+---
+class: middle
+
+# Como usar o xaringan?
+- Instalar o pacote:
+
+```{r echo=TRUE, eval=FALSE}
+install.packages("xaringan")
+```
+
+- Criar um novo RProj (post da [Curso-R](https://www.curso-r.com): sobre [RProj e diretórios](https://www.curso-r.com/blog/2019-07-16-zen-do-r-3/))
+  - File > New Project
+
+- Criar um arquivo:
+  - File > New File > R Markdown...
+  - New RMarkdown > From Template > Ninja presentation
+  
+- Apagar todo o conteúdo após o código `yaml`
+---
+class: middle
+
+# Estrutura do .Rmd
+
+```{r out.width="100%"}
+knitr::include_graphics("img/rmd-estrutura.png")
+```
+
+---
+class: middle
+
+# Dicas .Rmd
+
+```{r out.width="100%"}
+knitr::include_graphics("img/rmd-dicas.png")
+```
 
 ---
 class: middle
@@ -178,7 +220,7 @@ knitr::include_graphics("img/html-css-javascript.jpg")
 ---
 class: middle
 
-# Quais elementos podemos utilizar?
+# O que podemos adicionar na apresentação? 
 
 - Texto
 
@@ -249,7 +291,7 @@ class: middle
 
 
 ---
-class: middle
+class: 
 
 ## Códigos em R
 
@@ -258,17 +300,17 @@ class: middle
 ```{r echo=TRUE}
 nrow(mtcars)
 ```
-
+--
 ### Apenas código
 ```{r echo=TRUE, eval=FALSE}
 nrow(mtcars)
 ```
-
+--
 ### Apenas resultado
 ```{r echo=FALSE}
 nrow(mtcars)
 ```
-
+--
 
 ### Código inline
 
@@ -340,7 +382,7 @@ class: middle
 
 ## Gráficos
 
-### Gráficos em R
+### Gráficos em `R` - `ggplot2`
 
 
 ```{r}
@@ -369,11 +411,14 @@ class: middle
 
 ## Gráficos
 
-### Gráficos dinâmicos em R
-```{r, cache = TRUE,out.width="60%", fig.cap="<center><b>Fonte: <a href='https://www.datanovia.com/en/blog/gganimate-how-to-create-plots-with-beautiful-animation-in-r/'>Adaptado de Data Novia</a></b></center>"}
-p + facet_wrap(~continent) +
+### Gráficos dinâmicos em `R` - `ggplot2` + `gganimate`
+```{r, out.width="60%", fig.cap="<center><b>Fonte: <a href='https://www.datanovia.com/en/blog/gganimate-how-to-create-plots-with-beautiful-animation-in-r/'>Adaptado de Data Novia</a></b></center>"}
+panimate <- p + facet_wrap(~continent) +
   transition_time(year) +
   labs(title = "Ano: {frame_time}")
+
+
+panimate
 ```
 
 
@@ -383,25 +428,26 @@ class: middle
 
 ## Gráficos
 
-### Gráficos interativos em R
+### Gráficos interativos em `R` - `highcharter`
 
-```{r highcharter, cache=TRUE, echo=FALSE, fig.cap="<center><b> Fonte: <a href='https://rkabacoff.github.io/datavis/Interactive.html'>Adaptado de Datavis with R </a></b></center>", out.width="45%"}
+```{r highcharterplot,  echo=FALSE, fig.cap="<center><b> Fonte: <a href='https://rkabacoff.github.io/datavis/Interactive.html'>Adaptado de Datavis with R </a></b></center>", out.width="45%"}
 
 # create interactive line chart
 library(highcharter)
+
 # prepare data
 data(gapminder, package = "gapminder")
 library(dplyr)
-asia <- gapminder %>%
+americas <- gapminder %>%
   filter(continent == "Americas") %>%
   select(year, country, lifeExp)
 
 # convert to long to wide format
 library(tidyr)
-plotdata <- spread(asia, country, lifeExp)
+plotdata <- spread(americas, country, lifeExp)
 
 # generate graph
-h <- highchart() %>% 
+plot_highchart <- highchart() %>% 
   hc_xAxis(categories = plotdata$year) %>% 
   hc_add_series(name = "Brasil", 
                 data = plotdata$Brazil) %>% 
@@ -434,7 +480,7 @@ h <- highchart() %>%
              borderWidth = 4) %>% 
   hc_exporting(enabled = TRUE)
 
-  widgetframe::frameWidget(h)
+widgetframe::frameWidget(plot_highchart)
 ```
 
 ---
@@ -448,14 +494,14 @@ class: middle, center
 ---
 class: middle, center
 
-# Mas existem mais elementos!
+# Mas existem mais!
 
 ![cat](https://media0.giphy.com/media/5i7umUqAOYYEw/giphy-downsized.gif) 
 
 ---
 class: middle
 
-# Quais elementos podemos utilizar?
+# O que podemos adicionar na apresentação? 
 
 - Equações
 
@@ -463,11 +509,11 @@ class: middle
 
 - GIF
 
-- tweets
+- Tweets
 
 - Linha do tempo
 
-- Emoticon
+- Emojis `r emo::ji("smile")`
 
 
 ---
@@ -522,12 +568,18 @@ class: middle
 
 ## GIFs
 
-```{r echo=TRUE, out.width="70%"}
+```{r echo=TRUE, out.width="60%"}
 knitr::include_graphics("https://media2.giphy.com/media/S857VNxM6HwlZuYXrU/giphy.gif")
 ```
 
 
-Dica: Addin do RStudio - [giphyr](https://github.com/haozhu233/giphyr)
+- O Addin [giphyr](https://github.com/haozhu233/giphyr) ajuda a procurar Gifs diretamente do RStudio!
+
+```{r echo=TRUE, eval=FALSE}
+devtools::install_github("haozhu233/giphyr")
+```
+
+
 
 ---
 class: middle
@@ -536,7 +588,45 @@ class: middle
 <center><blockquote class="twitter-tweet" data-lang="pt"><p lang="pt" dir="ltr">Sábado passado aconteceu o <a href="https://twitter.com/hashtag/meetup?src=hash&amp;ref_src=twsrc%5Etfw">#meetup</a> de aniversário de 1 ano da <a href="https://twitter.com/hashtag/RLadies?src=hash&amp;ref_src=twsrc%5Etfw">#RLadies</a> São Paulo! O evento aconteceu lá na <a href="https://twitter.com/thoughtworksbr?ref_src=twsrc%5Etfw">@thoughtworksbr</a> , fomos super bem recebidas pela Chris, agradecemos muito pelo espaço e coffe break! Segue algumas fotos: <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/rstatsbr?src=hash&amp;ref_src=twsrc%5Etfw">#rstatsbr</a> <a href="https://t.co/FfW8Et1FVx">pic.twitter.com/FfW8Et1FVx</a></p>&mdash; R-Ladies São Paulo (@RLadiesSaoPaulo) <a href="https://twitter.com/RLadiesSaoPaulo/status/1165359598376771585?ref_src=twsrc%5Etfw">24 de agosto de 2019</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
 
+
+---
+class: middle
+
+## Tweets 
+
+- Adicione o seguinte código no `yaml`:
+```{r echo=TRUE, eval=FALSE}
+    # nature:
+    #   beforeInit: "https://platform.twitter.com/widgets.js"
+```
+
+
 - No twitter, copie o código disponível em "Incorporar esse tweet".
+
+---
+Class: middle, center
+
+## Emojis
+
+- Para utilizar emojis, instale o pacote:
+```{r echo=TRUE, eval=FALSE}
+devtools::install_github("hadley/emo")
+```
+
+
+- Exemplo:
+```{r echo=TRUE}
+# `r emo::ji("purple_heart")`
+```
+
+`r emo::ji("purple_heart")`
+
+- O addin `ermoji` ajuda a procurar emojis!
+
+```{r echo=TRUE, eval=FALSE}
+devtools::install_github("gadenbuie/ermoji")
+```
+
 
 ---
 Class: middle, center
