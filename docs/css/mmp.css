@@ -4,6 +4,15 @@ Author: Joseph V. Casillas
 Updated: 03/06/2018
 */
 
+.pull-left {
+  float: left;
+  width: 47%;
+}
+.pull-right {
+  float: right;
+  width: 47%;
+}
+
 div.my-footer {
     background-color: #2A6F9A;
     position: absolute;
@@ -87,19 +96,7 @@ td{
   padding-top: 1em;
 }
 
-.pull-left {
-  float: left;
-  width: 45%;
-}
 
-.pull-right {
-  float: right;
-  width: 45%;
-}
-
-.pull-right ~ * {
-  clear: both;
-}
 
 img, video, iframe {
   max-width: 100%;

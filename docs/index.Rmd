@@ -96,6 +96,13 @@ class: middle
 - Download em: https://www.rstudio.com/products/rstudio/download/
 
 ---
+class:middle
+
+
+```{r, out.width="100%", fig.cap="<center><b>Naruto? Sharingan? Xaringan? </b></center>"}
+knitr::include_graphics("img/naruto.jpg")
+```
+---
 class: middle
 
 # O ciclo da ciência de dados
@@ -363,8 +370,7 @@ class: middle
 ### Tabelas em R
 
 ```{r echo=TRUE}
-knitr::kable(x = head(iris), format = "markdown")
-knitr::kable(x = head(iris), format = "pandoc")
+knitr::kable(x = head(iris), format = "html")
 ```
 
 ---
@@ -374,8 +380,8 @@ class: middle
 
 ### Tabelas interativas em R
 
-```{r echo=TRUE}
-DT::datatable(data = head(iris))  
+```{r datatable, echo=TRUE}
+ DT::datatable(mtcars)  
 ```
 
 ---
@@ -419,7 +425,9 @@ panimate <- p + facet_wrap(~continent) +
   labs(title = "Ano: {frame_time}")
 
 
-panimate
+# panimate
+
+knitr::include_graphics("img/gif-gapminder.gif")
 ```
 
 
@@ -428,7 +436,7 @@ panimate
 class: middle
 
 ### Gráficos interativos em `R` - `highcharter`
-```{r highcharterplot, eval=FALSE, fig.cap="<center><b> Fonte: <a href='https://rkabacoff.github.io/datavis/Interactive.html'>Adaptado de Datavis with R </a></b></center>", include=FALSE, out.width="45%"}
+```{r highcharterplot, echo=FALSE, fig.cap="<center><b> Fonte: <a href='https://rkabacoff.github.io/datavis/Interactive.html'>Adaptado de Datavis with R </a></b></center>", out.width="45%"}
 
 # create interactive line chart
 library(highcharter)
@@ -478,7 +486,7 @@ plot_highchart <- highchart() %>%
              borderWidth = 4) %>%
   hc_exporting(enabled = TRUE)
 # 
- widgetframe::frameWidget(plot_highchart)
+ widgetframe::frameWidget(plot_highchart, options = frameOptions(lazyload = TRUE))
 ```
 
 <center><iframe width="720" height="500" src="index_files/figure-html/widgets/widget_highcharterplot.html" frameborder="0"></iframe></center>
@@ -494,6 +502,7 @@ class: middle, center
  
 ---
 class: middle, center
+background: https://media0.giphy.com/media/5i7umUqAOYYEw/giphy-downsized.gif
 
 # Mas existem mais!
 
@@ -637,7 +646,7 @@ Class: middle, center
 
 ## Videos do YouTube
 
-- Opção Compartilar > Incorporar: 
+- Opção Compartilhar > Incorporar: 
 
 <center><iframe width="720" height="405" src="https://www.youtube.com/embed/sNphW6nBNU8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
@@ -648,10 +657,20 @@ Class: middle, center
 
 # Vantagens e desvantagens
 
+
+
+
+.pull-left[
 `r emo::ji("+1")` Como é uma apresentação elaborada com códigos, é possível utilizar o versionamento de código utilizando `Git` e `GitHub`, e possibilita o desenvolvimento do material em equipe.
 
-`r emo::ji("-1")`
+`r emo::ji("+1")` Disponibilizando online e enviando o link, é possível atualizar o conteúdo em qualquer momento.
+]
 
+.pull-right[
+
+`r emo::ji("-1")` Em formato HTML, não é autocontido (possui dependências).
+
+]
 
 ---
 class: middle
@@ -659,6 +678,33 @@ class: middle
 ```{r, out.width="70%", fig.cap="<center><b>Ilustração por Allison Horst - Twitter: <a href='https://twitter.com/allison_horst/'> @allison_horst</a> </b></center>"}
 knitr::include_graphics("img/allisonhorst/community1.jpg")
 ```
+---
+class: middle
+
+# Referências
+
+- **RMarkdown**:
+  - [RMarkdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+  
+  - [R Markdown from RStudio](https://rmarkdown.rstudio.com/lesson-1.html)
+  
+  - [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+  
+  - [R for Data Science - Cap 27: R Markdown](https://r4ds.had.co.nz/r-markdown.html)
+  
+  - [Software Carpentry - Producing Reports With knitr ](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/)
+
+  - [Advanced R Markdown](https://slides.yihui.name/2017-rstudio-conf-rmarkdown-Yihui-Xie.html)
+
+- **Xaringan**:
+
+  - [Apresentação da documentação](http://slides.yihui.name/xaringan/) 
+
+  - [Xaringan Wiki](https://github.com/yihui/xaringan/wiki)
+  
+  - [Livro R Markdown (Capítulo 7)](https://bookdown.org/yihui/rmarkdown/xaringan.html)
+
+  - [Remark.js Wiki](https://github.com/gnab/remark/wiki)
 
 ---
 class:  middle
