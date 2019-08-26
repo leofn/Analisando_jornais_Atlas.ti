@@ -35,6 +35,7 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center", message=FALSE, warning
 ```{r}
 library(knitr)
 library(tidyverse)
+library(widgetframe)
 ```
 
 # Beatriz Milz
@@ -426,11 +427,8 @@ panimate
 ---
 class: middle
 
-## Gráficos
-
 ### Gráficos interativos em `R` - `highcharter`
-
-```{r highcharterplot,  echo=FALSE, fig.cap="<center><b> Fonte: <a href='https://rkabacoff.github.io/datavis/Interactive.html'>Adaptado de Datavis with R </a></b></center>", out.width="45%"}
+```{r highcharterplot, eval=FALSE, fig.cap="<center><b> Fonte: <a href='https://rkabacoff.github.io/datavis/Interactive.html'>Adaptado de Datavis with R </a></b></center>", include=FALSE, out.width="45%"}
 
 # create interactive line chart
 library(highcharter)
@@ -447,41 +445,44 @@ library(tidyr)
 plotdata <- spread(americas, country, lifeExp)
 
 # generate graph
-plot_highchart <- highchart() %>% 
-  hc_xAxis(categories = plotdata$year) %>% 
-  hc_add_series(name = "Brasil", 
-                data = plotdata$Brazil) %>% 
-  hc_add_series(name = "Argentina", 
+plot_highchart <- highchart() %>%
+  hc_xAxis(categories = plotdata$year) %>%
+  hc_add_series(name = "Brasil",
+                data = plotdata$Brazil) %>%
+  hc_add_series(name = "Argentina",
                 data = plotdata$Argentina) %>%
-  hc_add_series(name = "Paraguai", 
+  hc_add_series(name = "Paraguai",
                 data = plotdata$Paraguay) %>%
-  hc_add_series(name = "Uruguai", 
+  hc_add_series(name = "Uruguai",
                 data = plotdata$Uruguay) %>%
 
   hc_title(text = "Expectativa de vida por País - Mercosul",
-           margin = 20, 
+           margin = 20,
            align = "left",
-           style = list(color = "steelblue")) %>% 
+           style = list(color = "steelblue")) %>%
   hc_subtitle(text = "1952 à 2007",
               align = "left",
-              style = list(color = "#2b908f", 
-                           fontWeight = "bold")) %>% 
+              style = list(color = "#2b908f",
+                           fontWeight = "bold")) %>%
   hc_credits(enabled = TRUE, # add credits
              text = "Gapminder Data",
-             href = "http://gapminder.com") %>% 
-  hc_legend(align = "left", 
+             href = "http://gapminder.com") %>%
+  hc_legend(align = "left",
             verticalAlign = "top",
-            layout = "vertical", 
-            x = 0, 
+            layout = "vertical",
+            x = 0,
             y = 100) %>%
-  hc_tooltip(crosshairs = TRUE, 
+  hc_tooltip(crosshairs = TRUE,
              backgroundColor = "#FCFFC5",
-             shared = TRUE, 
-             borderWidth = 4) %>% 
+             shared = TRUE,
+             borderWidth = 4) %>%
   hc_exporting(enabled = TRUE)
-
-widgetframe::frameWidget(plot_highchart)
+# 
+ widgetframe::frameWidget(plot_highchart)
 ```
+
+<center><iframe width="720" height="500" src="index_files/figure-html/widgets/widget_highcharterplot.html" frameborder="0"></iframe></center>
+<center>Fonte: <a href='https://rkabacoff.github.io/datavis/Interactive.html'>Adaptado de Datavis with R </a></center>
 
 ---
 class: middle, center
@@ -591,6 +592,8 @@ class: middle
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
 
 
+
+
 ---
 class: middle
 
@@ -638,14 +641,16 @@ Class: middle, center
 
 <center><iframe width="720" height="405" src="https://www.youtube.com/embed/sNphW6nBNU8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
-
+`r emo::ji("musical_note")` - Cuando Los Ángeles Lloran - Maná
 
 ---
 Class: middle, center
 
-# Vantagens
+# Vantagens e desvantagens
 
-- Como é uma apresentação elaborada com códigos, é possível utilizar o versionamento de código utilizando `Git` e `GitHub`, e possibilita o desenvolvimento do material em equipe.
+`r emo::ji("+1")` Como é uma apresentação elaborada com códigos, é possível utilizar o versionamento de código utilizando `Git` e `GitHub`, e possibilita o desenvolvimento do material em equipe.
+
+`r emo::ji("-1")`
 
 
 ---

@@ -1,6 +1,5 @@
 base
 knitr
-kableExtra
 tidyverse
 ggplot2
 tibble
@@ -10,6 +9,8 @@ purrr
 dplyr
 stringr
 forcats
+htmlwidgets
+widgetframe
 gganimate
 gapminder
 highcharter
