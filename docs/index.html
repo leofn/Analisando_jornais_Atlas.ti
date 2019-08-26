@@ -4,18 +4,6 @@
     <title>Introdução ao pacote xaringan</title>
     <meta charset="utf-8" />
     <meta name="author" content="Beatriz Milz" />
-    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
-    <script src="libs/jquery/jquery.min.js"></script>
-    <link href="libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
-    <script src="libs/datatables-binding/datatables.js"></script>
-    <link href="libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
-    <link href="libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
-    <script src="libs/dt-core/js/jquery.dataTables.min.js"></script>
-    <link href="libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
-    <script src="libs/crosstalk/js/crosstalk.min.js"></script>
-    <script src="libs/pymjs/pym.v1.js"></script>
-    <script src="libs/widgetframe-binding/widgetframe.js"></script>
-    <script src="libs/blazy/blazy.min.js"></script>
     <link rel="stylesheet" href="css\default.css" type="text/css" />
     <link rel="stylesheet" href="css\mmp.css" type="text/css" />
     <link rel="stylesheet" href="css\mmp-fonts.css" type="text/css" />
@@ -211,10 +199,15 @@ class: middle
 
 # Estrutura da apresentação
 
-- No `xaringan`, utilizamos o arquivo `.Rmd` para escrever o código da apresentação, e é compilado para um arquivo `.html`. 
-- Esse arquivo `.html` é interpretado pelo navegador (ex. Chrome), utilizando também os arquivos `.css` e `.js`
+- No `xaringan`, utilizamos o arquivo `.Rmd` para escrever o código da apresentação, e é compilado para um arquivo `.html`.
+
+- Esse arquivo `.html` é interpretado pelo navegador (ex. Chrome), utilizando também os arquivos `.css` e `.js`.
+
+
 
 &lt;img src="img/html-css-javascript.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+
 
 
 ---
@@ -233,6 +226,18 @@ class: middle
 ---
 class: middle
 
+# O que precisa saber? 
+
+- **HTML**: É gerado automaticamente. ao compilar o .Rmd 
+- **CSS**: Temas! Usado para personalizar a parte visual da apresentação. Sobre temas, consulte: [xaringan wiki](https://github.com/yihui/xaringan/wiki/Themes)
+- **JS**: utiliza o Remark.JS, mas aceita outros códigos caso seja necessário.
+
+&lt;img src="https://media1.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy-downsized.gif" width="40%" style="display: block; margin: auto;" /&gt;
+
+ 
+---
+class: middle
+
 # O que podemos adicionar na apresentação? 
 
 - Texto
@@ -247,6 +252,8 @@ class: middle
 
 - Gráficos
 
+- Qualquer resultado de código de R :) Visualizações, gráficos, tabelas, etc.
+
 
 
 ---
@@ -254,9 +261,8 @@ class: middle, center
 
 # Exemplos
 
+&lt;img src="https://media0.giphy.com/media/CjmvTCZf2U3p09Cn0h/giphy-downsized.gif" width="70%" style="display: block; margin: auto;" /&gt;
 
-
-![CAT+](https://media0.giphy.com/media/CjmvTCZf2U3p09Cn0h/giphy-downsized.gif)  
 
 
 ---
@@ -446,20 +452,8 @@ knitr::kable(x = head(iris), format = "html")
 &lt;/tbody&gt;
 &lt;/table&gt;
 
----
-class: middle
+- Outra opção:  `DT::datatable(iris)`  
 
-## Tabelas
-
-### Tabelas interativas em R
-
-
-```r
- DT::datatable(mtcars)  
-```
-
-&lt;div id="htmlwidget-446bd85cca55eec78ee5" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-446bd85cca55eec78ee5">{"x":{"filter":"none","data":[["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant","Duster 360","Merc 240D","Merc 230","Merc 280","Merc 280C","Merc 450SE","Merc 450SL","Merc 450SLC","Cadillac Fleetwood","Lincoln Continental","Chrysler Imperial","Fiat 128","Honda Civic","Toyota Corolla","Toyota Corona","Dodge Challenger","AMC Javelin","Camaro Z28","Pontiac Firebird","Fiat X1-9","Porsche 914-2","Lotus Europa","Ford Pantera L","Ferrari Dino","Maserati Bora","Volvo 142E"],[21,21,22.8,21.4,18.7,18.1,14.3,24.4,22.8,19.2,17.8,16.4,17.3,15.2,10.4,10.4,14.7,32.4,30.4,33.9,21.5,15.5,15.2,13.3,19.2,27.3,26,30.4,15.8,19.7,15,21.4],[6,6,4,6,8,6,8,4,4,6,6,8,8,8,8,8,8,4,4,4,4,8,8,8,8,4,4,4,8,6,8,4],[160,160,108,258,360,225,360,146.7,140.8,167.6,167.6,275.8,275.8,275.8,472,460,440,78.7,75.7,71.1,120.1,318,304,350,400,79,120.3,95.1,351,145,301,121],[110,110,93,110,175,105,245,62,95,123,123,180,180,180,205,215,230,66,52,65,97,150,150,245,175,66,91,113,264,175,335,109],[3.9,3.9,3.85,3.08,3.15,2.76,3.21,3.69,3.92,3.92,3.92,3.07,3.07,3.07,2.93,3,3.23,4.08,4.93,4.22,3.7,2.76,3.15,3.73,3.08,4.08,4.43,3.77,4.22,3.62,3.54,4.11],[2.62,2.875,2.32,3.215,3.44,3.46,3.57,3.19,3.15,3.44,3.44,4.07,3.73,3.78,5.25,5.424,5.345,2.2,1.615,1.835,2.465,3.52,3.435,3.84,3.845,1.935,2.14,1.513,3.17,2.77,3.57,2.78],[16.46,17.02,18.61,19.44,17.02,20.22,15.84,20,22.9,18.3,18.9,17.4,17.6,18,17.98,17.82,17.42,19.47,18.52,19.9,20.01,16.87,17.3,15.41,17.05,18.9,16.7,16.9,14.5,15.5,14.6,18.6],[0,0,1,1,0,1,0,1,1,1,1,0,0,0,0,0,0,1,1,1,1,0,0,0,0,1,0,1,0,0,0,1],[1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,1,1,1,1,1,1],[4,4,4,3,3,3,3,4,4,4,4,3,3,3,3,3,3,4,4,4,3,3,3,3,3,4,5,5,5,5,5,4],[4,4,1,1,2,1,4,2,2,4,4,3,3,3,4,4,4,1,2,1,1,2,2,4,2,1,2,2,4,6,8,2]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>disp<\/th>\n      <th>hp<\/th>\n      <th>drat<\/th>\n      <th>wt<\/th>\n      <th>qsec<\/th>\n      <th>vs<\/th>\n      <th>am<\/th>\n      <th>gear<\/th>\n      <th>carb<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><
 ---
 class: middle
 
@@ -471,7 +465,7 @@ class: middle
 
 
 &lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="index_files/figure-html/unnamed-chunk-24-1.png" alt="&amp;lt;center&amp;gt;&amp;lt;b&amp;gt;Fonte: &amp;lt;a href='https://www.datanovia.com/en/blog/gganimate-how-to-create-plots-with-beautiful-animation-in-r/'&amp;gt;Adaptado de Data Novia&amp;lt;/a&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/center&amp;gt;" width="60%" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-26-1.png" alt="&amp;lt;center&amp;gt;&amp;lt;b&amp;gt;Fonte: &amp;lt;a href='https://www.datanovia.com/en/blog/gganimate-how-to-create-plots-with-beautiful-animation-in-r/'&amp;gt;Adaptado de Data Novia&amp;lt;/a&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/center&amp;gt;" width="60%" /&gt;
 &lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt;Fonte: &lt;a href='https://www.datanovia.com/en/blog/gganimate-how-to-create-plots-with-beautiful-animation-in-r/'&gt;Adaptado de Data Novia&lt;/a&gt;&lt;/b&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;/div&gt;
 
@@ -493,11 +487,7 @@ class: middle
 class: middle
 
 ### Gráficos interativos em `R` - `highcharter`
-&lt;div class="figure" style="text-align: center"&gt;
-&lt;div id="htmlwidget-4d1ba418583ea79943be" style="width:100%;height:504px;" class="widgetframe html-widget"></div>
-<script>if(!window.bLazy){window.bLazy = new Blazy();}</script>
-<script type="application/json" data-for="htmlwidget-4d1ba418583ea79943be">{"x":{"url":"index_files/figure-html//widgets/widget_highcharterplot.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":true}},"evals":[],"jsHooks":[]}</script><&lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt; Fonte: &lt;a href='https://rkabacoff.github.io/datavis/Interactive.html'&gt;Adaptado de Datavis with R &lt;/a&gt;&lt;/b&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;/div&gt;
+
 
 &lt;center&gt;&lt;iframe width="720" height="500" src="index_files/figure-html/widgets/widget_highcharterplot.html" frameborder="0"&gt;&lt;/iframe&gt;&lt;/center&gt;
 &lt;center&gt;Fonte: &lt;a href='https://rkabacoff.github.io/datavis/Interactive.html'&gt;Adaptado de Datavis with R &lt;/a&gt;&lt;/center&gt;
@@ -508,15 +498,16 @@ class: middle, center
 
 # Muito legal!
 
-![cat](https://media1.giphy.com/media/Nm8ZPAGOwZUQM/giphy.gif)  
+ 
+&lt;img src="https://media1.giphy.com/media/Nm8ZPAGOwZUQM/giphy.gif" width="70%" style="display: block; margin: auto;" /&gt;
  
 ---
 class: middle, center
-background: https://media0.giphy.com/media/5i7umUqAOYYEw/giphy-downsized.gif
 
 # Mas existem mais!
 
-![cat](https://media0.giphy.com/media/5i7umUqAOYYEw/giphy-downsized.gif) 
+&lt;img src="https://media0.giphy.com/media/5i7umUqAOYYEw/giphy-downsized.gif" width="100%" style="display: block; margin: auto;" /&gt;
+
 
 ---
 class: middle
@@ -534,9 +525,6 @@ class: middle
 - Emojis 😄
 
 - Videos 🎥
-
-
-- Linha do tempo
 
 ---
 class: middle
@@ -675,8 +663,29 @@ Class: middle, center
 
 🎵 - Cuando Los Ángeles Lloran - Maná
 
+
 ---
 Class: middle, center
+
+# E como compartilhar a apresentação?
+
+&lt;img src="https://media2.giphy.com/media/aQUGAeZ1fBWpy/giphy-downsized.gif" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+Class: middle, center
+
+# E como compartilhar a apresentação?
+
+- PDF
+
+- HTML - Online :)
+  - Em seu site;
+  - Github pages
+  - Netlify
+
+
+---
+Class: middle
 
 # Vantagens e desvantagens
 
@@ -684,7 +693,15 @@ Class: middle, center
 
 
 .pull-left[
-👍 Como é uma apresentação elaborada com códigos, é possível utilizar o versionamento de código utilizando `Git` e `GitHub`, e possibilita o desenvolvimento do material em equipe.
+👍 É reprodutível.
+
+👍 Dá para facilmente inserir equações em LaTeX.
+
+👍 Usar códigos R e seus resultados.
+
+👍 É possível utilizar o versionamento de código utilizando `Git` e `GitHub`.
+
+👍 Possibilita o desenvolvimento do material em equipe (através do GitHub).
 
 👍 Disponibilizando online e enviando o link, é possível atualizar o conteúdo em qualquer momento.
 ]
@@ -693,6 +710,9 @@ Class: middle, center
 
 👎 Em formato HTML, não é autocontido (possui dependências).
 
+👎/ 👍 R, Rmd, Markdown, HTML, CSS, JS...
+
+👎 Para personalizar visualmente a apresentação, caso não tenha um tema que agrade, precisa personalizar utilizando CSS.
 ]
 
 ---
@@ -701,6 +721,15 @@ class: middle
 &lt;div class="figure" style="text-align: center"&gt;
 &lt;img src="img/allisonhorst/community1.jpg" alt="&amp;lt;center&amp;gt;&amp;lt;b&amp;gt;Ilustração por Allison Horst - Twitter: &amp;lt;a href='https://twitter.com/allison_horst/'&amp;gt; @allison_horst&amp;lt;/a&amp;gt; &amp;lt;/b&amp;gt;&amp;lt;/center&amp;gt;" width="70%" /&gt;
 &lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt;Ilustração por Allison Horst - Twitter: &lt;a href='https://twitter.com/allison_horst/'&gt; @allison_horst&lt;/a&gt; &lt;/b&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+---
+class: middle
+
+# Quer saber mais?
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/aMostra.PNG" alt="&amp;lt;center&amp;gt;&amp;lt;b&amp;gt;&amp;lt;a href='https://www.ime.usp.br/~amostra/'&amp;gt;14ª aMostra Estatística 2019&amp;lt;/a&amp;gt; - 17/09 - Minicurso: Apresentações no R com xaringan &amp;lt;/b&amp;gt;&amp;lt;/center&amp;gt;" width="100%" /&gt;
+&lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt;&lt;a href='https://www.ime.usp.br/~amostra/'&gt;14ª aMostra Estatística 2019&lt;/a&gt; - 17/09 - Minicurso: Apresentações no R com xaringan &lt;/b&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;/div&gt;
 ---
 class: middle

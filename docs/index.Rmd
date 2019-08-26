@@ -202,12 +202,17 @@ class: middle
 
 # Estrutura da apresentação
 
-- No `xaringan`, utilizamos o arquivo `.Rmd` para escrever o código da apresentação, e é compilado para um arquivo `.html`. 
-- Esse arquivo `.html` é interpretado pelo navegador (ex. Chrome), utilizando também os arquivos `.css` e `.js`
+- No `xaringan`, utilizamos o arquivo `.Rmd` para escrever o código da apresentação, e é compilado para um arquivo `.html`.
+
+- Esse arquivo `.html` é interpretado pelo navegador (ex. Chrome), utilizando também os arquivos `.css` e `.js`.
+
+
 
 ```{r echo=FALSE, out.width="50%", eval = TRUE}
 knitr::include_graphics("img/html-css-javascript.jpg")
 ```
+
+
 
 
 ---
@@ -228,6 +233,20 @@ knitr::include_graphics("img/html-css-javascript.jpg")
 ---
 class: middle
 
+# O que precisa saber? 
+
+- **HTML**: É gerado automaticamente. ao compilar o .Rmd 
+- **CSS**: Temas! Usado para personalizar a parte visual da apresentação. Sobre temas, consulte: [xaringan wiki](https://github.com/yihui/xaringan/wiki/Themes)
+- **JS**: utiliza o Remark.JS, mas aceita outros códigos caso seja necessário.
+
+```{r, out.width="40%"}
+knitr::include_graphics("https://media1.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy-downsized.gif")
+```
+
+ 
+---
+class: middle
+
 # O que podemos adicionar na apresentação? 
 
 - Texto
@@ -242,6 +261,8 @@ class: middle
 
 - Gráficos
 
+- Qualquer resultado de código de R :) Visualizações, gráficos, tabelas, etc.
+
 
 
 ---
@@ -249,9 +270,10 @@ class: middle, center
 
 # Exemplos
 
+```{r, out.width="70%"}
+knitr::include_graphics("https://media0.giphy.com/media/CjmvTCZf2U3p09Cn0h/giphy-downsized.gif")
+```
 
-
-![CAT+](https://media0.giphy.com/media/CjmvTCZf2U3p09Cn0h/giphy-downsized.gif)  
 
 
 ---
@@ -373,16 +395,7 @@ class: middle
 knitr::kable(x = head(iris), format = "html")
 ```
 
----
-class: middle
-
-## Tabelas
-
-### Tabelas interativas em R
-
-```{r datatable, echo=TRUE}
- DT::datatable(mtcars)  
-```
+- Outra opção:  `DT::datatable(iris)`  
 
 ---
 class: middle
@@ -436,7 +449,7 @@ knitr::include_graphics("img/gif-gapminder.gif")
 class: middle
 
 ### Gráficos interativos em `R` - `highcharter`
-```{r highcharterplot, echo=FALSE, fig.cap="<center><b> Fonte: <a href='https://rkabacoff.github.io/datavis/Interactive.html'>Adaptado de Datavis with R </a></b></center>", out.width="45%"}
+```{r highcharterplot, eval=FALSE, fig.cap="<center><b> Fonte: <a href='https://rkabacoff.github.io/datavis/Interactive.html'>Adaptado de Datavis with R </a></b></center>", include=FALSE, out.width="45%"}
 
 # create interactive line chart
 library(highcharter)
@@ -498,15 +511,20 @@ class: middle, center
 
 # Muito legal!
 
-![cat](https://media1.giphy.com/media/Nm8ZPAGOwZUQM/giphy.gif)  
+ 
+```{r, out.width="70%"}
+knitr::include_graphics("https://media1.giphy.com/media/Nm8ZPAGOwZUQM/giphy.gif")
+```
  
 ---
 class: middle, center
-background: https://media0.giphy.com/media/5i7umUqAOYYEw/giphy-downsized.gif
 
 # Mas existem mais!
 
-![cat](https://media0.giphy.com/media/5i7umUqAOYYEw/giphy-downsized.gif) 
+```{r, out.width="100%"}
+knitr::include_graphics("https://media0.giphy.com/media/5i7umUqAOYYEw/giphy-downsized.gif")
+```
+
 
 ---
 class: middle
@@ -524,9 +542,6 @@ class: middle
 - Emojis `r emo::ji("smile")`
 
 - Videos `r emo::ji("movie_camera")`
-
-
-- Linha do tempo
 
 ---
 class: middle
@@ -652,8 +667,31 @@ Class: middle, center
 
 `r emo::ji("musical_note")` - Cuando Los Ángeles Lloran - Maná
 
+
 ---
 Class: middle, center
+
+# E como compartilhar a apresentação?
+
+```{r  out.width="50%"}
+knitr::include_graphics("https://media2.giphy.com/media/aQUGAeZ1fBWpy/giphy-downsized.gif")
+``` 
+
+---
+Class: middle, center
+
+# E como compartilhar a apresentação?
+
+- PDF
+
+- HTML - Online :)
+  - Em seu site;
+  - Github pages
+  - Netlify
+
+
+---
+Class: middle
 
 # Vantagens e desvantagens
 
@@ -661,7 +699,15 @@ Class: middle, center
 
 
 .pull-left[
-`r emo::ji("+1")` Como é uma apresentação elaborada com códigos, é possível utilizar o versionamento de código utilizando `Git` e `GitHub`, e possibilita o desenvolvimento do material em equipe.
+`r emo::ji("+1")` É reprodutível.
+
+`r emo::ji("+1")` Dá para facilmente inserir equações em LaTeX.
+
+`r emo::ji("+1")` Usar códigos R e seus resultados.
+
+`r emo::ji("+1")` É possível utilizar o versionamento de código utilizando `Git` e `GitHub`.
+
+`r emo::ji("+1")` Possibilita o desenvolvimento do material em equipe (através do GitHub).
 
 `r emo::ji("+1")` Disponibilizando online e enviando o link, é possível atualizar o conteúdo em qualquer momento.
 ]
@@ -670,6 +716,9 @@ Class: middle, center
 
 `r emo::ji("-1")` Em formato HTML, não é autocontido (possui dependências).
 
+`r emo::ji("-1")`/ `r emo::ji("+1")` R, Rmd, Markdown, HTML, CSS, JS...
+
+`r emo::ji("-1")` Para personalizar visualmente a apresentação, caso não tenha um tema que agrade, precisa personalizar utilizando CSS.
 ]
 
 ---
@@ -677,6 +726,14 @@ class: middle
 
 ```{r, out.width="70%", fig.cap="<center><b>Ilustração por Allison Horst - Twitter: <a href='https://twitter.com/allison_horst/'> @allison_horst</a> </b></center>"}
 knitr::include_graphics("img/allisonhorst/community1.jpg")
+```
+
+---
+class: middle
+
+# Quer saber mais?
+```{r, out.width="100%", fig.cap="<center><b><a href='https://www.ime.usp.br/~amostra/'>14ª aMostra Estatística 2019</a> - 17/09 - Minicurso: Apresentações no R com xaringan </b></center>"}
+knitr::include_graphics("img/aMostra.PNG")
 ```
 ---
 class: middle
