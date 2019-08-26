@@ -13,7 +13,7 @@
 class: center, middle, inverse, title-slide
 
 # Introdução ao pacote <code>xaringan</code>
-## Criando apresentações com <code>R</code>
+## Criando apresentações com <code>R</code> <BR> <a href="http://bit.ly/xaringan-IME">bit.ly/xaringan-IME</a>
 ### Beatriz Milz
 ### 27-08-2019
 
@@ -676,12 +676,24 @@ Class: middle, center
 
 # E como compartilhar a apresentação?
 
-- PDF
+- PDF:
+
+
+```r
+remotes::install_github('rstudio/pagedown')
+pagedown::chrome_print("index.html")
+```
+
 
 - HTML - Online :)
+
   - Em seu site;
-  - Github pages
-  - Netlify
+
+  - [GitHub Pages](https://pages.github.com/) - necessita ter o código em um repositório no GitHub
+
+  - [Netlify](https://www.netlify.com/) - necessita ter o código em um repositório no GitHub
+
+- Dica: crie um [bit.ly](https://bitly.com)
 
 
 ---
@@ -713,6 +725,8 @@ Class: middle
 👎/ 👍 R, Rmd, Markdown, HTML, CSS, JS...
 
 👎 Para personalizar visualmente a apresentação, caso não tenha um tema que agrade, precisa personalizar utilizando CSS.
+
+👎 Encontrar erros..
 ]
 
 ---
@@ -763,8 +777,25 @@ class: middle
 class:  middle
 
 ## Obrigada!
+.pull-left[
 
-- Contato:
+&lt;img src="https://media1.giphy.com/media/3oz8xIsloV7zOmt81G/giphy.gif" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+
+.pull-right[
+**Agradecimentos especiais**:
+- [Victor Fossaluza](https://www.ime.usp.br/~victorf/) - Pelo convite!
+- [Yihui Xie](https://github.com/yihui) - Pelo pacotes, livros, blogposts, vídeos 
+- [Bruna Wundervald](http://brunaw.com/) - Por ajudar na apresentação
+- [Julio Trecenti](https://github.com/jtrecenti), [Curso-R](https://www.curso-r.com/) e [13 aMostra de Estatística - IME  USP](https://www.ime.usp.br/~amostra/) pelo mini-curso de RMarkdown
+
+]
+
+
+
+
+- **Contato**:
 
   - Email: &lt;a href="mailto:beatriz.milz@usp.br"&gt;beatriz.milz@usp.br&lt;/a&gt;
   - Webpage: https://beatrizmilz.com

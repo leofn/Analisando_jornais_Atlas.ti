@@ -1,6 +1,6 @@
 ---
 title: "Introdução ao pacote `xaringan`"
-subtitle: "Criando apresentações com `R`"
+subtitle: "Criando apresentações com `R` <BR> [bit.ly/xaringan-IME](http://bit.ly/xaringan-IME)"
 author: "Beatriz Milz"
 #institute: "Instituição"
 date: "27-08-2019"
@@ -682,12 +682,23 @@ Class: middle, center
 
 # E como compartilhar a apresentação?
 
-- PDF
+- PDF:
+
+```{r echo=TRUE, eval=FALSE}
+remotes::install_github('rstudio/pagedown')
+pagedown::chrome_print("index.html")
+```
+
 
 - HTML - Online :)
+
   - Em seu site;
-  - Github pages
-  - Netlify
+
+  - [GitHub Pages](https://pages.github.com/) - necessita ter o código em um repositório no GitHub
+
+  - [Netlify](https://www.netlify.com/) - necessita ter o código em um repositório no GitHub
+
+- Dica: crie um [bit.ly](https://bitly.com)
 
 
 ---
@@ -719,6 +730,8 @@ Class: middle
 `r emo::ji("-1")`/ `r emo::ji("+1")` R, Rmd, Markdown, HTML, CSS, JS...
 
 `r emo::ji("-1")` Para personalizar visualmente a apresentação, caso não tenha um tema que agrade, precisa personalizar utilizando CSS.
+
+`r emo::ji("-1")` Encontrar erros..
 ]
 
 ---
@@ -767,8 +780,27 @@ class: middle
 class:  middle
 
 ## Obrigada!
+.pull-left[
 
-- Contato:
+```{r, out.width="100%"}
+knitr::include_graphics("https://media1.giphy.com/media/3oz8xIsloV7zOmt81G/giphy.gif")
+```
+]
+
+
+.pull-right[
+**Agradecimentos especiais**:
+- [Victor Fossaluza](https://www.ime.usp.br/~victorf/) - Pelo convite!
+- [Yihui Xie](https://github.com/yihui) - Pelo pacotes, livros, blogposts, vídeos 
+- [Bruna Wundervald](http://brunaw.com/) - Por ajudar na apresentação
+- [Julio Trecenti](https://github.com/jtrecenti), [Curso-R](https://www.curso-r.com/) e [13 aMostra de Estatística - IME  USP](https://www.ime.usp.br/~amostra/) pelo mini-curso de RMarkdown
+
+]
+
+
+
+
+- **Contato**:
 
   - Email: <a href="mailto:beatriz.milz@usp.br">beatriz.milz@usp.br</a>
   - Webpage: https://beatrizmilz.com
@@ -778,6 +810,11 @@ class:  middle
 
 
 - Apresentação feita com [Xaringan](https://github.com/yihui/xaringan) e [Kunoichi](https://github.com/emitanaka/ninja-theme). Código disponível [neste repositório](https://github.com/beatrizmilz/IME-27-08-2019).
+
+
+
+
+
 
 
 
