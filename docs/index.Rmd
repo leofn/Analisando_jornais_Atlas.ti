@@ -511,10 +511,12 @@ class: middle
 
 - Tweets
 
-- Linha do tempo
-
 - Emojis `r emo::ji("smile")`
 
+- Videos `r emo::ji("movie_camera")`
+
+
+- Linha do tempo
 
 ---
 class: middle
@@ -626,6 +628,16 @@ devtools::install_github("hadley/emo")
 ```{r echo=TRUE, eval=FALSE}
 devtools::install_github("gadenbuie/ermoji")
 ```
+
+---
+Class: middle, center
+
+## Videos do YouTube
+
+- Opção Compartilar > Incorporar: 
+
+<center><iframe width="720" height="405" src="https://www.youtube.com/embed/sNphW6nBNU8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
 
 
 ---
