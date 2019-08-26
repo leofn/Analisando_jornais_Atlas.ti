@@ -243,7 +243,14 @@ class: middle
 knitr::include_graphics("https://media1.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy-downsized.gif")
 ```
 
- 
+---
+class:middle
+
+<center>
+
+<blockquote class="twitter-tweet" data-lang="pt" data-link-color="#981CEB" width=350px><p lang="pt" dir="ltr">Eu no css: opa agora foi<br><br>Dei refresh e: <a href="https://t.co/yIcZVLcNEd">https://t.co/yIcZVLcNEd</a></p>&mdash; Jessie Veridiana (@veridiem) <a href="https://twitter.com/veridiem/status/1166096509252898817?ref_src=twsrc%5Etfw">26 de agosto de 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</center>
 ---
 class: middle
 
@@ -727,11 +734,11 @@ Class: middle
 
 `r emo::ji("-1")` Em formato HTML, não é autocontido (possui dependências).
 
-`r emo::ji("-1")`/ `r emo::ji("+1")` R, Rmd, Markdown, HTML, CSS, JS...
+`r emo::ji("-1")`/ `r emo::ji("+1")` R, Rmd, Markdown, HTML, CSS, JS...`r emo::ji("mage")`
 
 `r emo::ji("-1")` Para personalizar visualmente a apresentação, caso não tenha um tema que agrade, precisa personalizar utilizando CSS.
 
-`r emo::ji("-1")` Encontrar erros..
+`r emo::ji("-1")` Encontrar erros..  `r emo::ji("sob")`
 ]
 
 ---
