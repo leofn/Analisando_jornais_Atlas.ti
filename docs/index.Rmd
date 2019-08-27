@@ -292,13 +292,13 @@ O pacote foi criado por Yihui Xie, que é desenvolvedor de software na RStudio. 
 
 ## Markdown
 
-O pacote ~~xaringan~~ foi criado por [**Yihui Xie**](https://yihui.name/), que é desenvolvedor de software na *RStudio*.
+O pacote `xaringan` foi criado por [**Yihui Xie**](https://yihui.name/), que é ~~um ninja~~ desenvolvedor de software na *RStudio*.
 
 **Código Markdown:**
 
 ```{r echo=TRUE}
-# O pacote ~~xaringan~~ foi criado por [**Yihui Xie**](https://yihui.name/),
-# que é desenvolvedor de software na *RStudio*.
+# O pacote `xaringan` foi criado por [**Yihui Xie**](https://yihui.name/),
+# que é ~~um ninja~~ desenvolvedor de software na *RStudio*.
 ```
 
 
