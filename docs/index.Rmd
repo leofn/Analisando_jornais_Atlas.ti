@@ -251,8 +251,23 @@ class:middle
 <blockquote class="twitter-tweet" data-lang="pt" data-link-color="#981CEB" width=350px><p lang="pt" dir="ltr">Eu no css: opa agora foi<br><br>Dei refresh e: <a href="https://t.co/yIcZVLcNEd">https://t.co/yIcZVLcNEd</a></p>&mdash; Jessie Veridiana (@veridiem) <a href="https://twitter.com/veridiem/status/1166096509252898817?ref_src=twsrc%5Etfw">26 de agosto de 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </center>
+
+
 ---
 class: middle
+
+# RMarkdown Cheatsheet
+
+- **Online**: [https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+
+- **No RStudio**: No RStudio > Help > Cheatsheets > RMarkdown CheatCheet
+
+- Outras Cheatsheets: [RStudio Resources](https://www.rstudio.com/resources/cheatsheets/)
+
+
+---
+class: middle
+
 
 # O que podemos adicionar na apresentação? 
 
