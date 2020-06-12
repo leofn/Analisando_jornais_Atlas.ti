@@ -1,8 +1,7 @@
 ---
-title: "Introdução ao pacote `xaringan`"
-subtitle: "Criando apresentações com `R` <BR> [bit.ly/xaringan-IME](http://bit.ly/xaringan-IME)"
-author: "Beatriz Milz"
-#institute: "Instituição"
+title: "Métodos digitais nas Ciências Sociais: desafios e perspectivas"
+author: "Leonardo F. Nascimento"
+institute: "Universidade Federal da Bahia"
 date: "27-08-2019"
 encoding: "UTF-8"
 output:
@@ -20,7 +19,7 @@ layout: true
   
 <div class="my-footer"><span>
 
-<a href="https://beatrizmilz.com">Beatriz Milz</a> - Email: <a href="mailto:beatriz.milz@usp.br">beatriz.milz@usp.br</a>
+<a href="https://leofn.com">Leonardo F. Nascimento</a> - Email: <a href="mailto:leofn@ufba.br">leofn@ufba.br</a>
 </span></div>
 
 
@@ -29,60 +28,67 @@ class: middle
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 
-knitr::opts_chunk$set(echo = FALSE, fig.align = "center", message=FALSE, warning=FALSE, cache = TRUE)
+knitr::opts_chunk$set(
+	echo = FALSE,
+	fig.align = "center",
+	message = FALSE,
+	warning = FALSE,
+	cache = FALSE
+)
 ```
 
-```{r}
+```{r eval=FALSE, include=FALSE}
 library(knitr)
 library(tidyverse)
 library(widgetframe)
 ```
 
-# Beatriz Milz
-- Doutoranda no Programa de Pós-Graduação em Ciência Ambiental (PROCAM) - Instituto de Energia e Ambiente - Universidade de São Paulo
+# Leonardo F. Nascimento
 
-  - Bolsita FAPESP - Processo nº 2018/23771-6 
-  
-  - Projeto Temático FAPESP Macroamb - Processo nº 2015/03804-9 
-  
-```{r, out.width="80%"}
+```{r out.width="15%"}
 knitr::include_graphics("img/logos_bia.png")
 ```
+- 15% Programador, 20% Químico, 25% Psicólogo, 40% Cientista Social
 
-- Equipe da Secretaria Executiva  Editorial - [Revista Ambiente & Sociedade](http://scielo.br/asoc)
+- [Email: **leofn3@gmail.com**](mailto:leofn3@gmail.com) 
 
-- Co-organizadora - [R-Ladies São Paulo](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo) `r emo::ji("purple_heart")`
+- [Twitter:**@leofn3**](http://www.twitter.com/leofn3) 
 
-- [Currículo disponível neste link](https://beatrizmilz.github.io/resume/index.pdf)
+- [website: **www.leofn.com**](http://www.leofn.com)
 
-- Anteriormente:
-  - Mestre em Ciências - UNIFESP
-  - Bacharel em Gestão Ambiental - EACH/USP
-  
+
+
 ---
+
 class:  
 
-```{r, out.width="15%", fig.cap="<center><b>Logo - R-Ladies </center></b>"}
-knitr::include_graphics("img/hexlogorladies.jpeg")
+```{r, out.width="20%"}
+knitr::include_graphics("img/logo_MA_color.png")
 ```
 
-- R-Ladies é uma organização mundial que **promove a diversidade de gênero** na comunidade da linguagem R.
+- Objetivos: 
+  - contribuir para a difusão de uma prática de pesquisa/ensino e extensão digitalizada; 
+  
+  - propor investigações sobre os impactos no uso de tecnologias digitais; 
+  
+  - criar repositórios de dados digitais abertos para os diversos pesquisadores; 
+  
+  - promover a aproximação e o diálogo entre as humanidades e o campo das tecnologias.
 
-- R-Ladies São Paulo integra, orgulhosamente, a organização R-Ladies Global, em São Paulo. 
+---
 
---
+# LABHDUFBA nas redes:
 
-- [Código de conduta - R-Ladies](https://github.com/rladies/starter-kit/wiki/Code-of-Conduct#portuguese)
+  - Twitter: [@labhdufba](https://twitter.com/labhdufba), 
+  
+  - Instagram: [@labhdufba](http://instagram.com/labhdufba)
+  
+  - Github: [https://github.com/LABHDUFBA](https://github.com/LABHDUFBA)
 
---
+---
+class: inverse, center, middle
 
-- Saiba mais:
-  - Website RLadies Global: [https://rladies.org/](https://rladies.org/)
-  - Twitter: [@RLadiesGlobal](https://twitter.com/rladiesglobal), [@RLadiesSaoPaulo](https://twitter.com/RLadiesSaoPaulo)
-  - Instagram: [@RLadiesSaoPaulo](http://instagram.com/RLadiesSaoPaulo)
-  - Facebook: [@RLadiesSaoPaulo](http://facebook.com/RLadiesSaoPaulo)
-  - MeetUp: [https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo)
-  - Github: [https://github.com/rladies/meetup-presentations_sao-paulo](https://github.com/rladies/meetup-presentations_sao-paulo)
+# Vamos começar!
 
 ---
 class: middle

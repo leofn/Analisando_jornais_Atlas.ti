@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
   <head>
-    <title>Introdução ao pacote xaringan</title>
+    <title>Métodos digitais nas Ciências Sociais: desafios e perspectivas</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Beatriz Milz" />
+    <meta name="author" content="Leonardo F. Nascimento" />
     <link rel="stylesheet" href="css\default.css" type="text/css" />
     <link rel="stylesheet" href="css\mmp.css" type="text/css" />
     <link rel="stylesheet" href="css\mmp-fonts.css" type="text/css" />
@@ -12,9 +12,9 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Introdução ao pacote <code>xaringan</code>
-## Criando apresentações com <code>R</code> <BR> <a href="http://bit.ly/xaringan-IME">bit.ly/xaringan-IME</a>
-### Beatriz Milz
+# Métodos digitais nas Ciências Sociais: desafios e perspectivas
+### Leonardo F. Nascimento
+### Universidade Federal da Bahia
 ### 27-08-2019
 
 ---
@@ -23,7 +23,7 @@ layout: true
   
 &lt;div class="my-footer"&gt;&lt;span&gt;
 
-&lt;a href="https://beatrizmilz.com"&gt;Beatriz Milz&lt;/a&gt; - Email: &lt;a href="mailto:beatriz.milz@usp.br"&gt;beatriz.milz@usp.br&lt;/a&gt;
+&lt;a href="https://leofn.com"&gt;Leonardo F. Nascimento&lt;/a&gt; - Email: &lt;a href="mailto:leofn@ufba.br"&gt;leofn@ufba.br&lt;/a&gt;
 &lt;/span&gt;&lt;/div&gt;
 
 
@@ -33,50 +33,48 @@ class: middle
 
 
 
-# Beatriz Milz
-- Doutoranda no Programa de Pós-Graduação em Ciência Ambiental (PROCAM) - Instituto de Energia e Ambiente - Universidade de São Paulo
+# Leonardo F. Nascimento
 
-  - Bolsita FAPESP - Processo nº 2018/23771-6 
-  
-  - Projeto Temático FAPESP Macroamb - Processo nº 2015/03804-9 
-  
-&lt;img src="img/logos_bia.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/logos_bia.png" width="15%" style="display: block; margin: auto;" /&gt;
+- 15% Programador, 20% Químico, 25% Psicólogo, 40% Cientista Social
 
-- Equipe da Secretaria Executiva  Editorial - [Revista Ambiente &amp; Sociedade](http://scielo.br/asoc)
+- [Email: **leofn3@gmail.com**](mailto:leofn3@gmail.com) 
 
-- Co-organizadora - [R-Ladies São Paulo](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo) 💜
+- [Twitter:**@leofn3**](http://www.twitter.com/leofn3) 
 
-- [Currículo disponível neste link](https://beatrizmilz.github.io/resume/index.pdf)
+- [website: **www.leofn.com**](http://www.leofn.com)
 
-- Anteriormente:
-  - Mestre em Ciências - UNIFESP
-  - Bacharel em Gestão Ambiental - EACH/USP
-  
+
+
 ---
+
 class:  
 
-&lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="img/hexlogorladies.jpeg" alt="&amp;lt;center&amp;gt;&amp;lt;b&amp;gt;Logo - R-Ladies &amp;lt;/center&amp;gt;&amp;lt;/b&amp;gt;" width="15%" /&gt;
-&lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt;Logo - R-Ladies &lt;/center&gt;&lt;/b&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;img src="img/logo_MA_color.png" width="20%" style="display: block; margin: auto;" /&gt;
 
-- R-Ladies é uma organização mundial que **promove a diversidade de gênero** na comunidade da linguagem R.
+- Objetivos: 
+  - contribuir para a difusão de uma prática de pesquisa/ensino e extensão digitalizada; 
+  
+  - propor investigações sobre os impactos no uso de tecnologias digitais; 
+  
+  - criar repositórios de dados digitais abertos para os diversos pesquisadores; 
+  
+  - promover a aproximação e o diálogo entre as humanidades e o campo das tecnologias.
 
-- R-Ladies São Paulo integra, orgulhosamente, a organização R-Ladies Global, em São Paulo. 
+---
 
---
+# LABHDUFBA nas redes:
 
-- [Código de conduta - R-Ladies](https://github.com/rladies/starter-kit/wiki/Code-of-Conduct#portuguese)
+  - Twitter: [@labhdufba](https://twitter.com/labhdufba), 
+  
+  - Instagram: [@labhdufba](http://instagram.com/labhdufba)
+  
+  - Github: [https://github.com/LABHDUFBA](https://github.com/LABHDUFBA)
 
---
+---
+class: inverse, center, middle
 
-- Saiba mais:
-  - Website RLadies Global: [https://rladies.org/](https://rladies.org/)
-  - Twitter: [@RLadiesGlobal](https://twitter.com/rladiesglobal), [@RLadiesSaoPaulo](https://twitter.com/RLadiesSaoPaulo)
-  - Instagram: [@RLadiesSaoPaulo](http://instagram.com/RLadiesSaoPaulo)
-  - Facebook: [@RLadiesSaoPaulo](http://facebook.com/RLadiesSaoPaulo)
-  - MeetUp: [https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo)
-  - Github: [https://github.com/rladies/meetup-presentations_sao-paulo](https://github.com/rladies/meetup-presentations_sao-paulo)
+# Vamos começar!
 
 ---
 class: middle
@@ -874,9 +872,25 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
     deleted = true;
   });
-})();</script>
-
-<script>
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
 (function() {
   var links = document.getElementsByTagName('a');
   for (var i = 0; i < links.length; i++) {
@@ -885,7 +899,23 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
   }
 })();
-</script>
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
 
 <script>
 slideshow._releaseMath = function(el) {
