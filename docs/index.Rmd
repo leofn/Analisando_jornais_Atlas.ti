@@ -14,6 +14,8 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+editor_options: 
+  chunk_output_type: console
 ---
 layout: true
   
@@ -79,11 +81,17 @@ knitr::include_graphics("img/logo_MA_color.png")
 
 # LABHDUFBA nas redes:
 
+
   - Twitter: [@labhdufba](https://twitter.com/labhdufba), 
+  
   
   - Instagram: [@labhdufba](http://instagram.com/labhdufba)
   
+  
   - Github: [https://github.com/LABHDUFBA](https://github.com/LABHDUFBA)
+  
+  
+  - Youtube: [Clique aqui](https://www.youtube.com/channel/UCjUf9BsbG-C-gpA54zvOgBw)
 
 ---
 class: inverse, center, middle
@@ -93,55 +101,126 @@ class: inverse, center, middle
 ---
 class: middle
 
-# Pré-requisitos
+# "A digitalização do eu na vida cotidiana"
 
-## R
-- Download em: https://cran.r-project.org/
+--
 
-## RStudio
-- Download em: https://www.rstudio.com/products/rstudio/download/
+- ...novas formas de localização no espaço
+
+--
+
+- ...novas formas de buscar informações
+
+--
+
+- ...novas formas de nos relacionarmos
+
+--
+
+- ...novas formas de ler livros
+
+--
+ 
+- ...novas relações de poder, economia e sociedade
+
+--
 
 ---
 class:middle
 
+## O digital como "fato social total" 
 
-```{r, out.width="100%", fig.cap="<center><b>Naruto? Sharingan? Xaringan? </b></center>"}
-knitr::include_graphics("img/naruto.jpg")
+```{r, out.width="90%"}
+knitr::include_graphics("img/ds.jpeg")
 ```
----
-class: middle
 
-# O ciclo da ciência de dados
-```{r, out.width="100%", fig.cap="<center><b>Ilustração por Allison Horst - Twitter: <a href='https://twitter.com/allison_horst/'> @allison_horst</a> - Adaptado de WICKHAM & GROLEMUND, 2017</b></center>"}
-knitr::include_graphics("img/allisonhorst/data-analysis.jpg")
-```
+"a própria ideia de 'cultura' ou 'sociedade' não pode ser plenamente compreendida sem o reconhecimento de que os dispositivos de software e hardware constituem ativamente a individualidade, a corporeidade, a vida social, as relaçoes sociais e as instituiçoes" HORST, H. A.; MILLER, D. Digital Anthropology. Bloomsbury Academic, 2012. 
 
 ---
 class: middle
 
-# Pacote rmarkdown
+# Rastros Digitais
 
-```{r, out.width="70%", fig.cap="<center><b>Ilustração por Allison Horst - Twitter: <a href='https://twitter.com/allison_horst/'> @allison_horst</a> </b></center>"}
-knitr::include_graphics("img/allisonhorst/rmarkdown_wizards.png")
+```{r, out.width="50%"}
+knitr::include_graphics("img/datafication.jpg")
 ```
 
+"as atividades on-line dos usuários deixam rastros digitais que são transformados em pontos de dados em bancos de dados, mantidos por provedores de serviços e outras organizações públicas e privadas, e reaproveitados para exploração comercial, inovação empresarial, vigilância e pesquisa". LOMBORG et alli, 2020
+
+---
+
+# Dataficação
+
+```{r, out.width="35%"}
+knitr::include_graphics("img/datafication2.png")
+```
+---
+# Dataficação
+
+```{r, out.width="150%"}
+knitr::include_graphics("img/larribar4.png")
+```
+
+---
+# Dataficação
+
+```{r, out.width="100%"}
+knitr::include_graphics("img/larribar1.png")
+```
+
+---
+# Dataficação
+
+```{r, out.width="100%"}
+knitr::include_graphics("img/larribar2.png")
+```
+
+---
+# Dataficação
+
+```{r, out.width="80%"}
+knitr::include_graphics("img/datafication3.jpg")
+```
+
+Dataficação é a transformação da ação social em dados quantificados, permitindo assim o rastreamento em tempo real e a análise preditiva.(MAYER-SCHONBERGER & CUKIER, 2013)
 
 ---
 class: middle
 
-# Pacote rmarkdown
+# A virada digital nas Ciências Sociais:
 
-```{r, out.width="25%", fig.cap="<center><b>Logo: <a href='https://rmarkdown.rstudio.com'>Pacote Rmarkdown</a></b></center>"}
-knitr::include_graphics("img/rlogos/hex-rmarkdown.png")
-```
+--
 
-- Mantido pela [RStudio](https://rstudio.com/)
+- Sociologia Digital
 
-- extensão `.Rmd`
+--
 
-- Possibilita a utilização de códigos `R`, `Markdown`, `HTML` e outros.
+- Geografia Digital
+
+--
+
+- História Digital
+
+--
+
+- Economia Digital
+
+--
+
+- Ciência Social Computacional
 
 ---
+
+# A virada digital como mudança de paradigma
+
+
+```{r, out.width="80%"}
+knitr::include_graphics("img/dh.jpg")
+```
+
+Todas essas "correntes" ou "escolas" concordam que "novas fontes de dados e novas técnicas de armazenamento e análise de dados podem levar a uma mudança de paradigma nas ciências sociais" (JUNGHERR, 2015, p.34)
+
+
 class: middle
 
 # Pacote rmarkdown
@@ -415,123 +494,6 @@ class: middle
 ---
 class: middle
 
-## Tabelas
-
-### Tabelas em R
-
-```{r echo=TRUE}
-knitr::kable(x = head(iris), format = "html")
-```
-
-- Outra opção:  `DT::datatable(iris)`  
-
----
-class: middle
-
-## Gráficos
-
-### Gráficos em `R` - `ggplot2`
-
-
-```{r}
-library(ggplot2)
-library(gganimate)
-library(gapminder)
-theme_set(theme_bw())
-```
-
-```{r message=FALSE, warning=FALSE, out.width="60%", cache = TRUE, fig.cap="<center><b>Fonte: <a href='https://www.datanovia.com/en/blog/gganimate-how-to-create-plots-with-beautiful-animation-in-r/'>Adaptado de Data Novia</a></b></center>"}
-p <- ggplot(
-  gapminder, 
-  aes(x = gdpPercap, y=lifeExp, size = pop, colour = country)
-  ) +
-  geom_point(show.legend = FALSE, alpha = 0.7) +
-  scale_color_viridis_d() +
-  scale_size(range = c(2, 12)) +
-  scale_x_log10() +
-  labs(x = "PIB per capita", y = "Expectativa de vida (anos)")
-p
-```
-
-
----
-class: middle
-
-## Gráficos
-
-### Gráficos dinâmicos em `R` - `ggplot2` + `gganimate`
-```{r, out.width="60%", fig.cap="<center><b>Fonte: <a href='https://www.datanovia.com/en/blog/gganimate-how-to-create-plots-with-beautiful-animation-in-r/'>Adaptado de Data Novia</a></b></center>"}
-panimate <- p + facet_wrap(~continent) +
-  transition_time(year) +
-  labs(title = "Ano: {frame_time}")
-
-
-# panimate
-
-knitr::include_graphics("img/gif-gapminder.gif")
-```
-
-
-
----
-class: middle
-
-### Gráficos interativos em `R` - `highcharter`
-```{r highcharterplot, eval=FALSE, fig.cap="<center><b> Fonte: <a href='https://rkabacoff.github.io/datavis/Interactive.html'>Adaptado de Datavis with R </a></b></center>", include=FALSE, out.width="45%"}
-
-# create interactive line chart
-library(highcharter)
-
-# prepare data
-data(gapminder, package = "gapminder")
-library(dplyr)
-americas <- gapminder %>%
-  filter(continent == "Americas") %>%
-  select(year, country, lifeExp)
-
-# convert to long to wide format
-library(tidyr)
-plotdata <- spread(americas, country, lifeExp)
-
-# generate graph
-plot_highchart <- highchart() %>%
-  hc_xAxis(categories = plotdata$year) %>%
-  hc_add_series(name = "Brasil",
-                data = plotdata$Brazil) %>%
-  hc_add_series(name = "Argentina",
-                data = plotdata$Argentina) %>%
-  hc_add_series(name = "Paraguai",
-                data = plotdata$Paraguay) %>%
-  hc_add_series(name = "Uruguai",
-                data = plotdata$Uruguay) %>%
-
-  hc_title(text = "Expectativa de vida por País - Mercosul",
-           margin = 20,
-           align = "left",
-           style = list(color = "steelblue")) %>%
-  hc_subtitle(text = "1952 à 2007",
-              align = "left",
-              style = list(color = "#2b908f",
-                           fontWeight = "bold")) %>%
-  hc_credits(enabled = TRUE, # add credits
-             text = "Gapminder Data",
-             href = "http://gapminder.com") %>%
-  hc_legend(align = "left",
-            verticalAlign = "top",
-            layout = "vertical",
-            x = 0,
-            y = 100) %>%
-  hc_tooltip(crosshairs = TRUE,
-             backgroundColor = "#FCFFC5",
-             shared = TRUE,
-             borderWidth = 4) %>%
-  hc_exporting(enabled = TRUE)
-# 
- widgetframe::frameWidget(plot_highchart, options = frameOptions(lazyload = TRUE))
-```
-
-<center><iframe width="720" height="500" src="index_files/figure-html/widgets/widget_highcharterplot.html" frameborder="0"></iframe></center>
-<center>Fonte: <a href='https://rkabacoff.github.io/datavis/Interactive.html'>Adaptado de Datavis with R </a></center>
 
 ---
 class: middle, center
