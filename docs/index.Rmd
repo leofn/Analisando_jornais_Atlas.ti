@@ -26,7 +26,7 @@ layout: true
 
 
 ---
-class: middle
+class: middle, center
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 
@@ -50,48 +50,47 @@ library(widgetframe)
 ```{r out.width="15%"}
 knitr::include_graphics("img/logos_bia.png")
 ```
-- 15% Programador, 20% Químico, 25% Psicólogo, 40% Cientista Social
+15% Programador, 20% Químico, 25% Psicólogo, 40% Cientista Social
 
-- [Email: **leofn3@gmail.com**](mailto:leofn3@gmail.com) 
+[Email: **leofn3@gmail.com**](mailto:leofn3@gmail.com) 
 
-- [Twitter:**@leofn3**](http://www.twitter.com/leofn3) 
+[Twitter:**@leofn3**](http://www.twitter.com/leofn3) 
 
-- [website: **www.leofn.com**](http://www.leofn.com)
-
-
+[website: **www.leofn.com**](http://www.leofn.com)
 
 ---
 
-class:  
+class: middle, center  
 
-```{r, out.width="20%"}
+```{r, out.width="30%"}
 knitr::include_graphics("img/logo_MA_color.png")
 ```
 
-- Objetivos: 
-  - contribuir para a difusão de uma prática de pesquisa/ensino e extensão digitalizada; 
+# Objetivos: 
+
+Contribuir para a difusão de uma prática de pesquisa/ensino e extensão digitalizada; 
+
+Propor investigações sobre os impactos no uso de tecnologias digitais; 
   
-  - propor investigações sobre os impactos no uso de tecnologias digitais; 
-  
-  - criar repositórios de dados digitais abertos para os diversos pesquisadores; 
-  
-  - promover a aproximação e o diálogo entre as humanidades e o campo das tecnologias.
+Criar repositórios de dados digitais abertos para os diversos pesquisadores; 
+ 
+Promover a aproximação e o diálogo entre as humanidades e o campo das tecnologias.
 
 ---
-
+class: middle, center  
 # LABHDUFBA nas redes:
 
 
-  - Twitter: [@labhdufba](https://twitter.com/labhdufba), 
+Twitter: [@labhdufba](https://twitter.com/labhdufba), 
   
   
-  - Instagram: [@labhdufba](http://instagram.com/labhdufba)
+Instagram: [@labhdufba](http://instagram.com/labhdufba)
   
   
-  - Github: [https://github.com/LABHDUFBA](https://github.com/LABHDUFBA)
+Github: [https://github.com/LABHDUFBA](https://github.com/LABHDUFBA)
   
   
-  - Youtube: [Clique aqui](https://www.youtube.com/channel/UCjUf9BsbG-C-gpA54zvOgBw)
+Youtube: [Clique aqui](https://www.youtube.com/channel/UCjUf9BsbG-C-gpA54zvOgBw)
 
 ---
 class: inverse, center, middle
@@ -99,34 +98,34 @@ class: inverse, center, middle
 # Vamos começar!
 
 ---
-class: middle
+class: middle, center
 
 # "A digitalização do eu na vida cotidiana"
 
 --
 
-- ...novas formas de localização no espaço
+...novas formas de localização no espaço
 
 --
 
-- ...novas formas de buscar informações
+...novas formas de buscar informações
 
 --
 
-- ...novas formas de nos relacionarmos
+...novas formas de nos relacionarmos
 
 --
 
-- ...novas formas de ler livros
+...novas formas de ler livros
 
 --
  
-- ...novas relações de poder, economia e sociedade
+...novas relações de poder, economia e sociedade
 
 --
 
 ---
-class:middle
+class: middle, center
 
 ## O digital como "fato social total" 
 
@@ -137,7 +136,7 @@ knitr::include_graphics("img/ds.jpeg")
 "a própria ideia de 'cultura' ou 'sociedade' não pode ser plenamente compreendida sem o reconhecimento de que os dispositivos de software e hardware constituem ativamente a individualidade, a corporeidade, a vida social, as relaçoes sociais e as instituiçoes" HORST, H. A.; MILLER, D. Digital Anthropology. Bloomsbury Academic, 2012. 
 
 ---
-class: middle
+class: middle, center
 
 # Rastros Digitais
 
@@ -148,6 +147,7 @@ knitr::include_graphics("img/datafication.jpg")
 "as atividades on-line dos usuários deixam rastros digitais que são transformados em pontos de dados em bancos de dados, mantidos por provedores de serviços e outras organizações públicas e privadas, e reaproveitados para exploração comercial, inovação empresarial, vigilância e pesquisa". LOMBORG et alli, 2020
 
 ---
+class: middle, center
 
 # Dataficação
 
@@ -155,6 +155,8 @@ knitr::include_graphics("img/datafication.jpg")
 knitr::include_graphics("img/datafication2.png")
 ```
 ---
+class: middle, center
+
 # Dataficação
 
 ```{r, out.width="150%"}
@@ -162,6 +164,8 @@ knitr::include_graphics("img/larribar4.png")
 ```
 
 ---
+class: middle, center
+
 # Dataficação
 
 ```{r, out.width="100%"}
@@ -169,6 +173,8 @@ knitr::include_graphics("img/larribar1.png")
 ```
 
 ---
+class: middle, center
+
 # Dataficação
 
 ```{r, out.width="100%"}
@@ -176,6 +182,8 @@ knitr::include_graphics("img/larribar2.png")
 ```
 
 ---
+class: middle, center
+
 # Dataficação
 
 ```{r, out.width="80%"}
@@ -185,32 +193,32 @@ knitr::include_graphics("img/datafication3.jpg")
 Dataficação é a transformação da ação social em dados quantificados, permitindo assim o rastreamento em tempo real e a análise preditiva.(MAYER-SCHONBERGER & CUKIER, 2013)
 
 ---
-class: middle
+class: middle, center
 
 # A virada digital nas Ciências Sociais:
 
 --
 
-- Sociologia Digital
+## Sociologia Digital
 
 --
 
-- Geografia Digital
+## Geografia Digital
 
 --
 
-- História Digital
+## História Digital
 
 --
 
-- Economia Digital
+## Economia Digital
 
 --
 
-- Ciência Social Computacional
+## Ciência Social Computacional
 
 ---
-
+class: middle, center
 # A virada digital como mudança de paradigma
 
 
@@ -232,101 +240,178 @@ knitr::include_graphics("https://media0.giphy.com/media/CjmvTCZf2U3p09Cn0h/giphy
 É possível pesquisar os fenômenos digitais sem o uso de métodos digitais de pesquisa?
 
 ---
+class: middle, center
+# Desafios: dados digitais 
+<br>
+--
 
-# Desafios 
-
- 
+## Publicidade/Acessibilidade
 
 --
 
-##Dados digitais
+## Terceirização
 
 --
 
-  - Publicidade/Acessibilidade
+## Evocação versus coleta
 
 --
 
-  - Terceirização
-
---
-
-  - Evocação versus coleta
-
---
-
-  - Representatividade
+## Representatividade
   
 --
   
-  - Volume, Velocidade, Variedade, Perecibilidade
+## Volume, Velocidade, Variedade, Perecibilidade
   
 --
-  
-  - Não há isocronia
+
+## Não há isocronia
+
 ---
+class: middle, center
+
+# Desafios: ferramentas digitais
+<br>
+--
+
+## Coleta/extração (webscraping, data mining) 
+
+--
+
+##Articulação analógico e digital
+
+--
+
+##Quali-quanti (Análises automatizadas x análises interpretativas)
+
+--
+
+## Letramento digital
+
+--
+
+## Caixas-pretas: open-source x proprietário
+
+--
+
+## Realidade virtual e aumentada 
+
+---
+class: middle, center
+
+# Desafios: resultados
+<br>
+--
+
+## Dilemas éticos
+
+--
+
+## Qual a capacidade pública de intervirmos ou de instruirmos atores em disputa?
+
+--
+
+## Qual a capacidade preditiva das análises?
+
+--
+
+## Como avaliar os efeitos das diferentes arquiteturas algorítmicas?
+
+--
+
+## Como tratar das dimensões da experiências que escapam à dataﬁcação?
+
+---
+class: middle, center
+
+# Fetichismos dos dados, dos métodos e dos resultados
+<br>
+--
+
+Coletar mais dados e de uma diversidade de fontes garantiria per se uma pesquisa necessariamente melhor **FALSO**
+
+Utilizar uma diversidade de métodos digitais garantiria per se uma pesquisa necessariamente melhor **FALSO**
+
+Os resultados das pesquisas baseadas em dados digitais e métodos digitais são necessariamente melhores e/ou superiores às pesquisas analógicas tradicionais **FALSO**
+
+---
+class: middle, center
+
+# Vamos andar de bicicletas?
+
+```{r, out.width="60%"}
+knitr::include_graphics("https://media.giphy.com/media/xTiTnAUgTbDrsUiHja/giphy.gif")
+```
+
+---
+class: middle, center
+
+# Vamos andar de bicicletas?
+<br>
+--
+
+Percepção da utilidade; 
+
+--
+
+Aprendizado inicial; 
+
+--
+
+Aperfeiçoamento do uso; 
+
+--
+
+Diversiﬁcação/especialização; 
+
+--
+
+Criação
+
+---
+
+
 class: middle
 
 # Referências
 
-- **RMarkdown**:
-  - [RMarkdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
-  
-  - [R Markdown from RStudio](https://rmarkdown.rstudio.com/lesson-1.html)
-  
-  - [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
-  
-  - [R for Data Science - Cap 27: R Markdown](https://r4ds.had.co.nz/r-markdown.html)
-  
-  - [Software Carpentry - Producing Reports With knitr ](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/)
+HORST, H. A.; MILLER, D. Digital Anthropology. Bloomsbury Academic, 2012.
 
-  - [Advanced R Markdown](https://slides.yihui.name/2017-rstudio-conf-rmarkdown-Yihui-Xie.html)
+JUNGHERR, A. Analyzing Political Communication with Digital Trace Data: The Role of Twitter Messages in Social Science Research. Springer, 2015. 
 
-- **Xaringan**:
-
-  - [Apresentação da documentação](http://slides.yihui.name/xaringan/) 
-
-  - [Xaringan Wiki](https://github.com/yihui/xaringan/wiki)
-  
-  - [Livro R Markdown (Capítulo 7)](https://bookdown.org/yihui/rmarkdown/xaringan.html)
-
-  - [Remark.js Wiki](https://github.com/gnab/remark/wiki)
+LOMBORG, S.; DENCIK, L.; MOE, H. Methods for Datafication, Datafication of Methods: Introduction to the Special Issue. European Journal of Communication, p. 0267323120922045, Acesso em: 5 maio 2020. 
 
 ---
 class:  middle
 
-## Obrigada!
+## Obrigado gente!
 .pull-left[
-
 ```{r, out.width="100%"}
 knitr::include_graphics("https://media1.giphy.com/media/3oz8xIsloV7zOmt81G/giphy.gif")
 ```
 ]
 
-
 .pull-right[
 **Agradecimentos especiais**:
-- [Victor Fossaluza](https://www.ime.usp.br/~victorf/) - Pelo convite!
-- [Yihui Xie](https://github.com/yihui) - Pelo pacotes, livros, blogposts, vídeos 
-- [Bruna Wundervald](http://brunaw.com/) e [Haydee Svab](https://br.linkedin.com/in/hsvab) - Por ajudar nas apresentações anteriores sobre xaringan (e pelas sugestões!)
-- [Julio Trecenti](https://github.com/jtrecenti), [Curso-R](https://www.curso-r.com/) e [13 aMostra de Estatística - IME  USP](https://www.ime.usp.br/~amostra/) pelo mini-curso de RMarkdown
+- Prof. Israel - Pelo convite!
+- [Tarssio](https://github.com/tarssioesa) - Pelas dicas no script em R para o Larribar
+- [Beatriz Milz do R-Ladies](https://github.com/beatrizmilz/IME-27-08-2019) - De quem eu "garfei" esta apresentação e modifiquei]
 
-]
+---
+# Leonardo F. Nascimento
 
+```{r out.width="15%"}
+knitr::include_graphics("img/logos_bia.png")
+```
+15% Programador, 20% Químico, 25% Psicólogo, 40% Cientista Social
 
+[Email: **leofn3@gmail.com**](mailto:leofn3@gmail.com) 
 
+[Twitter:**@leofn3**](http://www.twitter.com/leofn3) 
 
-- **Contato**:
+[website: **www.leofn.com**](http://www.leofn.com)
 
-  - Email: <a href="mailto:beatriz.milz@usp.br">beatriz.milz@usp.br</a>
-  - Webpage: https://beatrizmilz.com
-  - Github: <a href="http://github.com/beatrizmilz">@beatrizmilz</a>
-  - Twitter: <a href="http://twitter.com/beatrizmilz">@BeaMilz</a> 
-  - Linkedin: <a href="https://www.linkedin.com/in/beatrizmilz">Beatriz Milz</a>
-
-
-- Apresentação feita com [Xaringan](https://github.com/yihui/xaringan) e [Kunoichi](https://github.com/emitanaka/ninja-theme). Código disponível [neste repositório](https://github.com/beatrizmilz/IME-27-08-2019).
-
+---
 
 
 
