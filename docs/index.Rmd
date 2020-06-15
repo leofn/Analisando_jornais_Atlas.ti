@@ -398,6 +398,8 @@ knitr::include_graphics("https://media1.giphy.com/media/3oz8xIsloV7zOmt81G/giphy
 - [Beatriz Milz do R-Ladies](https://github.com/beatrizmilz/IME-27-08-2019) - De quem eu "garfei" esta apresentação e modifiquei]
 
 ---
+class: middle, center
+
 # Leonardo F. Nascimento
 
 ```{r out.width="15%"}
@@ -410,12 +412,3 @@ knitr::include_graphics("img/logos_bia.png")
 [Twitter:**@leofn3**](http://www.twitter.com/leofn3) 
 
 [website: **www.leofn.com**](http://www.leofn.com)
-
----
-
-
-
-
-
-
-
